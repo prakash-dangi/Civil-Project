@@ -1,26 +1,3 @@
-// document.getElementById('CompressiveTensileStressCalculator').addEventListener('submit', function (event) {
-//     event.preventDefault();
-//     var force = parseFloat(document.getElementById('force').value);
-//     var area = parseFloat(document.getElementById('area').value);
-
-//     if (!isNaN(force) && !isNaN(area)) {
-//         if (area > 0) {
-//             var stress = force / area;
-//             var stressResult = document.getElementById('stress-result');
-
-//             if (force < 0) {
-//                 stressResult.value = 'Compressive Stress: ' + stress + ' Pa';
-//             } else {
-//                 stressResult.value = 'Tensile Stress: ' + stress + ' Pa';
-//             }
-//         } else {
-//             document.getElementById('stress-result').value = 'Invalid area value, area can\'t be negative or zero';
-//         }
-//     } else {
-//         document.getElementById('stress-result').value = 'Invalid input';
-//     }
-// });
-
 document.getElementById('CompressiveTensileStressCalculator').addEventListener('submit', function (event) {
     event.preventDefault();
 

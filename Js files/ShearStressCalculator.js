@@ -1,16 +1,3 @@
-// document.getElementById('ShearStressCalculator').addEventListener('submit', function (event) {
-//     event.preventDefault();
-//     var shearForce = parseFloat(document.getElementById('shear-force').value);
-//     var crossSectionalArea = parseFloat(document.getElementById('cross-sectional-area').value);
-
-//     if (!isNaN(shearForce) && !isNaN(crossSectionalArea)) {
-//         var shearStress = shearForce / crossSectionalArea;
-//         document.getElementById('shear-stress-result').value = 'Shear Stress: ' + shearStress + ' Pa';
-//     } else {
-//         document.getElementById('shear-stress-result').value = 'Invalid input';
-//     }
-// });
-
 document.getElementById('ShearStressCalculator').addEventListener('submit', function (event) {
     event.preventDefault();
 

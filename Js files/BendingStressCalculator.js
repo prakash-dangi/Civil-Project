@@ -1,16 +1,3 @@
-// document.getElementById('BendingStressCalculator').addEventListener('submit', function (event) {
-//     event.preventDefault();
-//     var moment = parseFloat(document.getElementById('moment').value);
-//     var sectionModulus = parseFloat(document.getElementById('section-modulus').value);
-
-//     if (!isNaN(moment) && !isNaN(sectionModulus)) {
-//         var bendingStress = moment / sectionModulus;
-//         document.getElementById('bending-stress-result').value = 'Bending Stress: ' + bendingStress + ' Pa';
-//     } else {
-//         document.getElementById('bending-stress-result').value = 'Invalid input';
-//     }
-// });
-
 document.getElementById('BendingStressCalculator').addEventListener('submit', function (event) {
     event.preventDefault();
 
