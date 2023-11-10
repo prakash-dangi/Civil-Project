@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elastic Moduli Calculator</title>
+    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/animatecss/animate.css">
+    <link rel="stylesheet" href="assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="assets/socicon/css/styles.css">
+    <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="stylesheet" href="assets/gallery/style.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+    <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    <style>
+        .error-message {
+            margin-top: 5px;
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <section data-bs-version="5.1" class="mbr-section" id="elastic-moduli-calculator" style="padding-top: 100px;">
+        <div class="container">
+            <div class="mbr-section-head mb-5">
+                <h2 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                    <strong>Elastic Moduli Calculator</strong>
+                </h2>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <!-- Theory Section -->
+                    <div class="mbr-section" id="theory-section">
+                        <h3 class="mbr-section-title mbr-fonts-style align-left mb-4 display-4">
+                            <strong>Theory of Elastic Moduli</strong>
+                        </h3>
+                        <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
+                            Elastic moduli are fundamental material properties that describe the response of a material
+                            to deformation under applied forces. There are three main elastic moduli:
+                        </p>
+                        <!-- Elastic Modulus (E) -->
+                        <h4 class="mbr-section-title mbr-fonts-style align-left mb-3 display-5">
+                            <strong>Elastic Modulus (E)</strong>
+                        </h4>
+                        <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
+                            Elastic Modulus (also known as Young's Modulus) is a measure of a material's stiffness.
+                            It quantifies how much a material will deform under a given load. The formula is given by:
+                        </p>
+                        <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
+                            \[ E = 2G(1 + \mu) \]
+                        </p>
+                        <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
+                            where \( E \) is the Elastic Modulus, \( G \) is the Rigidity Modulus, and \( \mu \) is Poisson's Ratio.
+                        </p>
+
+                        <!-- Rigidity Modulus (G) -->
+                        <h4 class="mbr-section-title mbr-fonts-style align-left mb-3 display-5">
+                            <strong>Rigidity Modulus (G)</strong>
+                        </h4>
+                        <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
+                            Rigidity Modulus measures the material's resistance to shearing deformation. It is related
+                            to the shear stress and shear strain in a material. The formula is given by:
+                        </p>
+                        <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
+                            \[ G = \frac{E}{2(1 + \mu)} \]
+                        </p>
+                        <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
+                            where \( G \) is the Rigidity Modulus, \( E \) is the Elastic Modulus, and \( \mu \) is Poisson's Ratio.
+                        </p>
+
+                        <!-- Bulk Modulus (K) -->
+                        <h4 class="mbr-section-title mbr-fonts-style align-left mb-3 display-5">
+                            <strong>Bulk Modulus (K)</strong>
+                        </h4>
+                        <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
+                            Bulk Modulus measures the material's resistance to uniform compression or expansion. It is
+                            related to the hydrostatic stress and volumetric strain in a material. The formula is given by:
+                        </p>
+                        <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
+                            \[ K = \frac{E}{3(1 - 2\mu)} \]
+                        </p>
+                        <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
+                            where \( K \) is the Bulk Modulus, \( E \) is the Elastic Modulus, and \( \mu \) is Poisson's Ratio.
+                        </p>
+
+                        <!-- Poisson's Ratio (μ) -->
+                        <h4 class="mbr-section-title mbr-fonts-style align-left mb-3 display-5">
+                            <strong>Poisson's Ratio (\(\mu\))</strong>
+                        </h4>
+                        <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
+                            Poisson's Ratio measures the deformation in the direction perpendicular to the applied force.
+                            It is the ratio of transverse contraction strain to longitudinal extension strain. The formula is given by:
+                        </p>
+                        <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
+                            \[ \mu = \frac{E}{2G} - 1 \]
+                        </p>
+                        <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
+                            where \( \mu \) is Poisson's Ratio, \( E \) is the Elastic Modulus, and \( G \) is the Rigidity Modulus.
+                        </p>
+
+                        <!-- Calculator Section -->
+                        <div class="mbr-section" id="calculator-section">
+                            <h3 class="mbr-section-title mbr-fonts-style align-left mb-4 display-4">
+                                <strong>Elastic Moduli Calculator</strong>
+                            </h3>
+                            <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
+                                Choose the parameter you want to calculate and enter the known values:
+                            </p>
+                            <!-- Calculator Form -->
+                            <div class="mbr-section" id="calculator-form">
+                                <div class="container">
+                                    <div class="row justify-content-center mt-4">
+                                        <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                                            <form method="POST" class="mbr-form form-with-styler" id="elastic-moduli-form">
+                                                <div class="dragArea row">
+                                                    <div class="col-md col-sm-12 form-group mb-3" data-for="parameter-select">
+                                                        <label for="parameter-select" class="form-label">Select Parameter:</label>
+                                                        <select class="form-control" id="parameter-select" required>
+                                                            <option value="" disabled selected>Select Parameter</option>
+                                                            <option value="E">Elastic Modulus (E)</option>
+                                                            <option value="G">Rigidity Modulus (G)</option>
+                                                            <option value="K">Bulk Modulus (K)</option>
+                                                            <option value="mu">Poisson's Ratio (\(\mu\))</option>
+                                                        </select>
+                                                        <div class="col-md col-sm-12 form-group mb-3" data-for="known-values">
+                                                            <label for="known-values" class="form-label">Enter Known Values:</label>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <label for="known-e">E:</label>
+                                                                    <input type="text" name="known-e" placeholder="E" 
+                                                                        data-form-field="known-e" class="form-control" value="" id="known-e">
+                                                                </div>
+                                                                <div class="col">
+                                                                    <label for="known-g">G:</label>
+                                                                    <input type="text" name="known-g" placeholder="G" 
+                                                                        data-form-field="known-g" class="form-control" value="" id="known-g">
+                                                                </div>
+                                                                <div class="col">
+                                                                    <label for="known-k">K:</label>
+                                                                    <input type="text" name="known-k" placeholder="K" 
+                                                                        data-form-field="known-k" class="form-control" value="" id="known-k">
+                                                                </div>
+                                                                <div class="col">
+                                                                    <label for="known-mu">μ:</label>
+                                                                    <input type="text" name="known-mu" placeholder="μ   " 
+                                                                        data-form-field="known-mu" class="form-control" value="" id="known-mu">
+                                                                </div>
+                                                            </div>
+                                                            <small id="known-values-help" class="form-text text-muted">
+                                                                Enter numeric values for each known variable. Leave the space blank for the variable you want to calculate.
+                                                            </small>
+                                                        </div>
+                                                        <div class="col-md col-sm-12 form-group mb-3" data-for="result">
+                                                            <label for="result" class="form-label">Result:</label>
+                                                            <input type="text" name="result" placeholder="Result" data-form-field="result" 
+                                                                class="form-control" value="" id="result" readonly>
+                                                        </div>
+                                                        <!-- Error Message Container -->
+                                                        <div id="error-message" class="error-message"></div>
+                                                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
+                                                            <button type="button" class="btn btn-primary display-7" onclick="calculate()">Calculate</button>
+                                                        </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="Js files\ElasticModuliPoissonsRatioRelations.js"></script>
+    </body>
+    </html>
