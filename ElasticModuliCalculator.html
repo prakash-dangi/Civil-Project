@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
   <meta name="description" content="">
-  <title>Young's Modulus Calculator</title>
+  <title>Elastic Moduli Calculator</title>
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
@@ -233,6 +233,44 @@
 </section>
 
 <!--Bulk Modulus Calculator-->
+<section data-bs-version="5.1" class="mbr-section" id="bulk-modulus-theory" style="padding-top: 100px;">
+    <div class="container">
+        <div class="mbr-section-head mb-5">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                <strong>Bulk Modulus (K): Unveiling Material Response to Uniform Pressure</strong>
+            </h3>
+            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                Bulk Modulus, denoted as K, is a fundamental property in material science that characterizes how a material responds to changes in volume under the influence of uniform pressure.
+            </p>
+            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                <b>Definition:</b> Bulk Modulus measures a material's resistance to uniform compression or expansion. It is defined as the ratio of change in pressure to the fractional change in volume.
+            </p>
+            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                <b>Mathematical Formulation:</b> The formula for Bulk Modulus is given by:
+            </p>
+            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                \[ K = -V \frac{{dP}}{{dV}} \]
+            </p>
+            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                Where:
+                - \( K \) is the Bulk Modulus,
+                - \( V \) is the volume of the material,
+                - \(\frac{{dP}}{{dV}}\) is the rate of change of pressure with respect to volume.
+            </p>
+            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                <b>Physical Interpretation:</b> A higher Bulk Modulus indicates that the material is less compressible and more resistant to volume changes under pressure.
+            </p>
+            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                <b>Real-world Applications:</b> Bulk Modulus is crucial in various applications, such as designing hydraulic systems, understanding the behavior of liquids and gases under pressure, and predicting the response of materials to external forces.
+            </p>
+            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                <b>Limitations:</b> The model assumes isotropy and linear elasticity, and real materials may deviate from these assumptions under extreme conditions.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!--Bulk Modulus Calculator-->
 <section data-bs-version="5.1" class="form5" id="bulk-modulus-form" style="padding-top: 100px; padding-bottom: 65px;">
     <div class="container">
         <div class="mbr-section-head mb-5">
@@ -240,8 +278,11 @@
                 <strong>Bulk Modulus Calculator</strong>
             </h3>
             <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                Enter the change in volume and change in pressure to calculate Bulk Modulus (K).
+                Enter the initial volume, change in volume, and change in pressure to calculate Bulk Modulus (K).
             </h4>
+            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                <strong>Convention:</strong> The negative sign in the result indicates compression. For expansion, the result would be positive.
+            </p>
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
@@ -255,6 +296,10 @@
                         </div>
                     </div>
                     <div class="dragArea row">
+                        <div class="col-md col-sm-12 form-group mb-3" data-for="initial-volume">
+                            <input type="text" name="Initial Volume" placeholder="Initial Volume"
+                                   data-form-field="Initial Volume" class="form-control" value="" id="initial-volume">
+                        </div>
                         <div class="col-md col-sm-12 form-group mb-3" data-for="change-in-volume">
                             <input type="text" name="Change in Volume" placeholder="Change in Volume"
                                    data-form-field="Change in Volume" class="form-control" value="" id="change-in-volume">
