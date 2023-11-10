@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="generator" content="Mobirise v5.9.6, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <meta name="description" content="">
+
+    <title>Mechanical Stress Calculators</title>
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/animatecss/animate.css">
+    <link rel="stylesheet" href="assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="assets/socicon/css/styles.css">
+    <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="stylesheet" href="assets/gallery/style.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+    <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+</head>
+
+<body>
+    <section data-bs-version="5.1" class="form5" id="mechanical-stress-calculator" style="margin-top: 80px;">
+        <div class="container">
+            <div class="mbr-section-head mb-5">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                    <strong>Mechanical Stress Calculators</strong></h3>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <!-- Torsional Stress Calculator -->
+<div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+    <form method="POST" class="mbr-form form-with-styler" data-form-title="Torsional Stress Calculator" id="TorsionalStressCalculator">
+        <div class="row">
+            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                Oops...! some problem!
+            </div>
+        </div>
+        <div class="dragArea row">
+            <div class="col-md col-sm-12 form-group mb-3" data-for="torque">
+                <input type="text" name="Torque" placeholder="Torque" data-form-field="Torque" class="form-control" value="" id="torque">
+            </div>
+            <div class="col-md col-sm-12 form-group mb-3" data-for="polar-moment">
+                <input type="text" name="Polar Moment of Inertia" placeholder="Polar Moment of Inertia" data-form-field="Polar Moment of Inertia" class="form-control" value="" id="polar-moment">
+            </div>
+            <div class="col-12 form-group mb-3" data-for="torsional-stress-result">
+                <input type="tel" name="Torsional Stress" placeholder="Torsional Stress" data-form-field="Torsional Stress" class="form-control" value="" id="torsional-stress-result"
+                    style="text-align: center;">
+            </div>
+            <div class="col-12 form-group mb-3" id="torsional-stress-unit">
+                <select name="Torsional Stress Unit" class="form-control" id="torsional-unit-selector">
+                    <option value="pa">Pa</option>
+                    <option value="mpa">MPa</option>
+                    <option value="gpa">GPa</option>
+                    <option value="psi">psi</option>
+                    <option value="ksi">ksi</option>
+                </select>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
+                <button type="submit" class="btn btn-primary display-7">Calculate Torsional Stress</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+                <!-- Bending Stress Calculator -->
+                <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                    <form method="POST" class="mbr-form form-with-styler" data-form-title="Bending Stress Calculator" id="BendingStressCalculator">
+                        <div class="row">
+                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                                Oops...! some problem!
+                            </div>
+                        </div>
+                        <div class="dragArea row">
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="moment">
+                                <input type="text" name "Bending Moment" placeholder="Bending Moment" data-form-field="Bending Moment" class="form-control" value="" id="moment">
+                            </div>
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="section-modulus">
+                                <input type="text" name="Section Modulus" placeholder="Section Modulus" data-form-field="Section Modulus" class="form-control" value="" id="section-modulus">
+                            </div>
+                            <div class="col-12 form-group mb-3" data-for="bending-stress-result">
+                                <input type="tel" name="Bending Stress" placeholder="Bending Stress" data-form-field="Bending Stress" class="form-control" value="" id="bending-stress-result"
+                                    style="text-align: center;">
+                            </div>
+                            <div class="col-12 form-group mb-3" id="bending-stress-unit">
+                                <select name="Bending Stress Unit" class="form-control" id="bending-unit-selector">
+                                    <option value="pa">Pa</option>
+                                    <option value="mpa">MPa</option>
+                                    <option value="gpa">GPa</option>
+                                    <option value="psi">psi</option>
+                                    <option value="ksi">ksi</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
+                                <button type="submit" class="btn btn-primary display-7">Calculate Bending Stress</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Shear Stress Calculator -->
+                <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                    <form method="POST" class="mbr-form form-with-styler" data-form-title="Shear Stress Calculator" id="ShearStressCalculator">
+                        <div class="row">
+                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                                Oops...! some problem!
+                            </div>
+                        </div>
+                        <div class="dragArea row">
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="shear-force">
+                                <input type="text" name="Shear Force" placeholder="Shear Force" data-form-field="Shear Force" class="form-control" value="" id="shear-force">
+                            </div>
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="cross-sectional-area">
+                                <input type="text" name="Cross-Sectional Area" placeholder="Cross-Sectional Area" data-form-field="Cross-Sectional Area" class="form-control" value="" id="cross-sectional-area">
+                            </div>
+                            <div class="col-12 form-group mb-3" data-for="shear-stress-result">
+                                <input type="tel" name="Shear Stress" placeholder="Shear Stress" data-form-field="Shear Stress" class="form-control" value="" id="shear-stress-result"
+                                    style="text-align: center;">
+                            </div>
+                            <div class="col-12 form-group mb-3" id="shear-stress-unit">
+                                <select name="Shear Stress Unit" class="form-control" id="shear-unit-selector">
+                                    <option value="pa">Pa</option>
+                                    <option value="mpa">MPa</option>
+                                    <option value="gpa">GPa</option>
+                                    <option value="psi">psi</option>
+                                    <option value="ksi">ksi</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
+                                <button type="submit" class="btn btn-primary display-7">Calculate Shear Stress</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Compressive and Tensile Stress Calculator -->
+                <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                    <form method="POST" class="mbr-form form-with-styler" data-form-title="Compressive and Tensile Stress Calculator" id="CompressiveTensileStressCalculator">
+                        <div class="row">
+                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                                Oops...! some problem!
+                            </div>
+                        </div>
+                        <div class="dragArea row">
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="force">
+                                <input type="text" name="Applied Force" placeholder="Applied Force" data-form-field="Applied Force" class="form-control" value="" id="force">
+                            </div>
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="area">
+                                <input type="text" name="Area the Force is Applied To" placeholder="Area the Force is Applied To" data-form-field="Area the Force is Applied To" class="form-control" value="" id="area">
+                            </div>
+                            <div class="col-12 form-group mb-3" data-for="stress-result">
+                                <input type="tel" name="Stress" placeholder="Stress" data-form-field="Stress" class="form-control" value="" id="stress-result"
+                                    style="text-align: center;">
+                            </div>
+                            <div class="col-12 form-group mb-3" id="stress-unit">
+                                <select name="Stress Unit" class="form-control" id="stress-unit-selector">
+                                    <option value="pa">Pa</option>
+                                    <option value="mpa">MPa</option>
+                                    <option value="gpa">GPa</option>
+                                    <option value="psi">psi</option>
+                                    <option value="ksi">ksi</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
+                                <button type="submit" class="btn btn-primary display-7">Calculate Compressive/Tensile Stress</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Include separate JavaScript files for each stress calculator -->
+    <script src="Js files\TorsionalStressCalculator.js"></script>
+    <script src="Js files\BendingStressCalculator.js"></script>
+    <script src="Js files\ShearStressCalculator.js"></script>
+    <script src="Js files\CompressiveTensileStressCalculator.js"></script>
+</body>
+
+</html>
