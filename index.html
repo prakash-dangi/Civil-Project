@@ -1,59 +1,625 @@
 <!DOCTYPE html>
-<html  >
-<head>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="generator" content="Mobirise v5.9.6, mobirise.com" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <meta name="description" content="" />
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v5.9.6, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <!-- <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon"> -->
-  <meta name="description" content="">
-  
-  
-  <title>Home</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/animatecss/animate.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="stylesheet" href="assets/gallery/style.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="assets/web/assets/mobirise-icons2/mobirise2.css"
+    />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/bootstrap/css/bootstrap-reboot.min.css"
+    />
+    <link rel="stylesheet" href="assets/animatecss/animate.css" />
+    <link rel="stylesheet" href="assets/dropdown/css/style.css" />
+    <link rel="stylesheet" href="assets/socicon/css/styles.css" />
+    <link rel="stylesheet" href="assets/theme/css/style.css" />
+    <link rel="stylesheet" href="assets/gallery/style.css" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"
+    /></noscript>
+    <link
+      rel="preload"
+      as="style"
+      href="assets/mobirise/css/mbr-additional.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/mobirise/css/mbr-additional.css"
+      type="text/css"
+    />
+    <style>
+      .btn-primary {
+        font-size: 25px;
+        padding: 17px 22px;
+      }
+      footer {
+        background-color: #333; /* Set your desired background color */
+        color: #ffd700; /* Set your desired text color */
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px; /* Add some initial margin to footer */
+      }
 
-  
-  
-  
-</head>
-<body>
-  
-<section data-bs-version="5.1" class="header5 cid-tJS6uM4N87" id="header05-1" style="padding-top: 110px;">  
-	
+      .footer-section {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 30px; /* Adjust the margin as needed */
+      }
 
-	
-	
-	<div class="align-center container">
-		<div class="row justify-content-center" style= "margin-right: 0px; margin-left: 0px;">
-			<div class="col-md-12 col-lg-9">
-				<h1 class="mbr-section-title mbr-fonts-style mb-4 display-1"><strong>Stress, Strain, Elastic Moduli calculator</strong></h1>
-				<p class="mbr-text mbr-fonts-style mb-4 display-7">You can use this calculator for calculating the Stress, Strain and Elastic Moduli.</p>
-        <div class="mbr-section-btn mt-3">
-          <a class="btn btn-primary display-7" href="StressCalculator.html">Calculate Stress</a>
-          <a class="btn btn-primary display-7" href="StrainCalculator.html">Calculate Strain</a>
-          <a class="btn btn-primary display-7" href="PoissonsRatio.html">Calculate Poissons Ratio</a>
-          <a class="btn btn-primary display-7" href="ElasticModuliCalculator.html">Calculate different Elastic Moduli</a>
-          <a class="btn btn-primary display-7" href="DeformationInBars.html">Calculate Deformation and Young's Modulus</a>
-          <a class="btn btn-primary display-7" href="ElasticModuliPoissonsRatioRelations.html">Calculate any Modulus by other Moduli and Poissons Ratio </a>
+      .footer-section h2 {
+        font-size: 20px;
+        margin-bottom: 15px; /* Add more space between headings */
+        color: #fff; /* Set your desired glossy text color */
+      }
+
+      .footer-section p {
+        color: #fff; /* Set your text color */
+        margin-bottom: 8px; /* Add slight space between names */
+      }
+
+      .footer-section a {
+        color: #fff; /* Set your link color */
+        display: block;
+        margin-bottom: 5px;
+        text-decoration: none;
+        transition: color 0.3s ease; /* Smooth color transition */
+      }
+
+      .footer-section a:hover {
+        color: #ffd700; /* Change link color on hover */
+      }
+
+      .footer-section h2 {
+        color: #ffd700;
+      }
+
+      .footer-section hr {
+        border-top: 1px solid #fff; /* Set the color of the horizontal line */
+        margin: 20px 0;
+      }
+
+      p {
+        color: #fff; /* Set your text color */
+        margin-bottom: 10px;
+      }
+      /* Add styles for the navigation bar */
+      nav {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .logo span {
+        color: #ffd700; /* Set your desired logo color */
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+      }
+
+      nav a:hover {
+        color: #ffd700; /* Change link color on hover */
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: #fff;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #555;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /* Style for the "About the Project" button */
+      #about-button {
+        background-color: #ffd700;
+        color: #333;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+      }
+      #about-button {
+        border-radius: 8px; /* Adjust the border-radius value as needed */
+      }
+      .dropdown-content {
+        min-width: 180px; /* Adjust the min-width value as needed */
+      }
+
+      nav {
+        background-color: rgba(
+          51,
+          51,
+          51,
+          0.87
+        ); /* Adjust the alpha (transparency) value as needed */
+        color: #fff;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.7); /* Add a subtle glowing effect with a yellow color */
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+        transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for links */
+      }
+
+      nav a:hover {
+        color: #ffd700;
+        background-color: rgba(
+          255,
+          215,
+          0,
+          0.2
+        ); /* Add a subtle background glow on hover */
+      }
+      .btn-primary {
+        font-size: 25px;
+        padding: 17px 22px;
+      }
+
+      /* Add styles for the navigation bar */
+      nav {
+        background-color: rgba(51, 51, 51, 0.87);
+        color: #fff;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .logo span {
+        color: #ffd700;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #ffd700;
+        background-color: rgba(255, 215, 0, 0.2);
+      }
+
+      /* Style for the "About the Project" button */
+      #about-button {
+        background-color: #ffd700;
+        color: #333;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+      }
+
+      /* Style for the dropdown animation */
+      .dropdown-content {
+        min-width: 180px;
+        display: none;
+        position: absolute;
+        background-color: #333;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        animation: fadeInDown 0.5s ease; /* Fade-in animation */
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      /* Style for the dropdown animation */
+      .dropdown-content {
+        min-width: 180px;
+        display: none;
+        position: absolute;
+        background-color: #333;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        animation: fadeInDown 0.5s ease; /* Fade-in animation */
+        padding: 10px; /* Add padding */
+        border-radius: 8px; /* Add rounded corners */
+      }
+      /* Responsive styles for smaller screens */
+      @media only screen and (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .logo {
+          margin-bottom: 10px;
+        }
+
+        nav a {
+          margin: 5px 0;
+        }
+      }
+      @media only screen and (max-width: 768px) {
+        .logo {
+          text-align: center; /* Center the logo for smaller screens */
+        }
+
+        .nav-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+          background-color: rgba(51, 51, 51, 0.87);
+          box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+        }
+
+        /* Hide the regular navigation items for smaller screens */
+        nav a {
+          display: none;
+        }
+
+        .hamburger-menu {
+          display: flex;
+          flex-direction: column;
+          cursor: pointer;
+        }
+
+        .bar {
+          width: 30px;
+          height: 3px;
+          background-color: #fff;
+          margin: 6px 0;
+          transition: 0.4s;
+        }
+
+        .mobile-menu {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          right: 0;
+          background-color: #333;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+        }
+
+        .mobile-menu a,
+        .mobile-menu button {
+          padding: 15px;
+          text-align: center;
+          text-decoration: none;
+          color: #fff;
+          transition: background-color 0.3s ease;
+        }
+
+        .mobile-menu a:hover,
+        .mobile-menu button:hover {
+          background-color: #555;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="logo">Civil<span>Calculator</span></div>
+
+      <div class="dropdown">
+        <a href="#">Tools</a>
+        <div class="dropdown-content">
+          <a href="StressCalculator.html">Stress</a>
+          <a href="StrainCalculator.html">Strain</a>
+          <a href="PoissonsRatio.html">Poissons Ratio</a>
+          <a href="ElasticConstantsCalculator.html">Elastic Moduli</a>
+          <a href="DeformationInBars.html">Deformation and Young's Modulus</a>
+          <a href="ElasticModuliPoissonsRatioRelations.html"
+            >Moduli and Poissons Ratio
+          </a>
         </div>
-		</div>
-		<div class="row mt-5 justify-content-center">
-		</div>
-	</div>
-</section>
+      </div>
+      <div class="dropdown">
+        <a href="#">Resources</a>
+        <div class="dropdown-content">
+          <a href="https://en.wikipedia.org/wiki/Stress_(mechanics)"
+            >More on Stress</a
+          >
+          <a href="https://en.wikipedia.org/wiki/Strain_(mechanics)"
+            >More on Strain</a
+          >
+          <a href="https://en.wikipedia.org/wiki/Poisson%27s_ratio"
+            >Poisson's Ratio</a
+          >
+          <a href="https://en.wikipedia.org/wiki/Young%27s_modulus"
+            >About Young's Modulus</a
+          >
+          <a href="https://en.wikipedia.org/wiki/Deformation_(engineering)"
+            >About Deformation</a
+          >
+        </div>
+      </div>
+      <a href="#">Documentation</a>
+      <button id="about-button" onclick="scrollToFooter()">
+        About the Project
+      </button>
+      <a href="#">Suggestions</a>
+      <div class="hamburger-menu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
 
-  <input name="animation" type="hidden">
+    <section
+      data-bs-version="5.1"
+      class="header5 cid-tJS6uM4N87"
+      id="header05-1"
+      style="padding-top: 110px"
+    >
+      <div class="align-center container">
+        <div
+          class="row justify-content-center"
+          style="margin-right: 0px; margin-left: 0px"
+        >
+          <div class="col-md-12 col-lg-9" style="width: 1202px; height: 630px">
+            <h1 class="mbr-section-title mbr-fonts-style mb-4 display-1">
+              <strong>Stress, Strain, Elastic Moduli calculator</strong>
+            </h1>
+            <p class="mbr-text mbr-fonts-style mb-4 display-7">
+              You can use this calculator for calculating the Stress, Strain and
+              Elastic Moduli.
+            </p>
+            <div class="mbr-section-btn mt-3" id="button-section">
+              <a class="btn btn-primary display-7" href="StressCalculator.html"
+                >Calculate Stress</a
+              >
+              <a class="btn btn-primary display-7" href="StrainCalculator.html"
+                >Calculate Strain</a
+              >
+              <a class="btn btn-primary display-7" href="PoissonsRatio.html"
+                >Calculate Poissons Ratio</a
+              >
+              <a
+                class="btn btn-primary display-7"
+                href="ElasticConstantsCalculator.html"
+                >Calculate different Elastic Moduli</a
+              >
+              <a class="btn btn-primary display-7" href="DeformationInBars.html"
+                >Calculate Deformation and Young's Modulus</a
+              >
+              <a
+                class="btn btn-primary display-7"
+                href="ElasticModuliPoissonsRatioRelations.html"
+                >Calculate any Modulus by other Moduli and Poissons Ratio
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5 justify-content-center"></div>
+      </div>
+    </section>
+    <section>
+      <footer>
+        <div class="footer-section">
+          <h2>Team Members</h2>
+          <p>
+            Jitesh Patel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Documentation &
+            Research&nbsp;&nbsp;&nbsp;23BCP196
+          </p>
+          <p>
+            Shardul Jani&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Development and
+            Design&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23BCP225
+          </p>
+          <p>
+            Prasanna Vijh&nbsp;&nbsp;&nbsp;&nbsp;Documentation &
+            Research&nbsp;&nbsp;&nbsp;23BCP235
+          </p>
+          <p>
+            Dev
+            Patel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Documentation &
+            Research&nbsp;&nbsp;&nbsp;23BCP237
+          </p>
+          <p>
+            Prakash Dangi&nbsp;&nbsp;&nbsp;&nbsp;Development &
+            Design&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23BCP239
+          </p>
+          <p>
+            Nidhi Baldaniya&nbsp;&nbsp;Documentation &
+            Research&nbsp;&nbsp;&nbsp;23BCP240
+          </p>
+          <p>
+            Meet Rathod&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Development &
+            Design&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23BCP241
+          </p>
+          <!-- Add similar lines for other team members -->
+        </div>
+
+        <div class="footer-section">
+          <h2>Calculators</h2>
+          <a href="StressCalculator.html">Stress</a>
+          <a href="StrainCalculator.html">Strain</a>
+          <a href="DeformationInBars.html">Deformation and Young's Modulus</a>
+          <a href="PoissonsRatio.html">Poissons Ratio</a>
+          <a href="ElasticConstantsCalculator.html">Elastic Moduli</a>
+          <a href="ElasticModuliPoissonsRatioRelations.html"
+            >Moduli and Poissons Ratio</a
+          >
+        </div>
+
+        <div class="footer-section">
+          <h2>Documentation</h2>
+          <a href="#">Link to PDF 1</a>
+          <a href="#">Link to PDF 2</a>
+          <!-- Add similar lines for other documentation links -->
+        </div>
+
+        <div class="footer-section">
+          <h2>Submitted To</h2>
+          <p>Teacher Name</p>
+          <p>Designation: Teacher Designation</p>
+          <p>Education: Teacher Education</p>
+        </div>
+
+        <hr />
+
+        <p>College Name and Address</p>
+      </footer>
+    </section>
+
+    <script>
+      // JavaScript to adjust the margin-top of the footer based on the height of the button section
+      document.addEventListener("DOMContentLoaded", function () {
+        var buttonSection = document.getElementById("button-section");
+        var footer = document.querySelector("footer");
+
+        // Set initial margin-top for the footer
+        footer.style.marginTop = buttonSection.clientHeight + "px";
+
+        // Update margin-top on window resize
+        window.addEventListener("resize", function () {
+          footer.style.marginTop = buttonSection.clientHeight + "px";
+        });
+      });
+    </script>
+    <!-- JavaScript for scrolling to the footer -->
+    <script>
+      function scrollToFooter() {
+        var footer = document.querySelector("footer");
+        footer.scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var nav = document.querySelector("nav");
+
+        // Update the navigation bar style on scroll
+        window.addEventListener("scroll", function () {
+          var scrollPos = window.scrollY;
+
+          if (scrollPos > 50) {
+            // Add a shadow and change background color when scrolling down
+            nav.style.background = "rgba(51, 51, 51, 0.9)";
+            nav.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+          } else {
+            // Reset styles when at the top of the page
+            nav.style.background = "rgba(51, 51, 51, 0.8)";
+            nav.style.boxShadow = "none";
+          }
+        });
+
+        // Keep the navigation bar fixed at the top
+        var navOffsetTop = nav.offsetTop;
+
+        window.addEventListener("scroll", function () {
+          if (window.scrollY >= navOffsetTop) {
+            nav.style.position = "fixed";
+            nav.style.width = "100%";
+            nav.style.top = "0";
+            nav.style.zIndex = "1000";
+          } else {
+            nav.style.position = "";
+            nav.style.width = "";
+            nav.style.top = "";
+            nav.style.zIndex = "";
+          }
+        });
+      });
+    </script>
+    <script>
+      function showDropdown() {
+        var dropdownContent = document.querySelector(".dr opdown-content");
+        dropdownContent.style.display = "block";
+      }
+
+      function hideDropdown() {
+        var dropdownContent = document.querySelector(".dropdown-content");
+        dropdownContent.style.display = "none";
+      }
+    </script>
+
+    <script>
+      function toggleMenu() {
+        var mobileMenu = document.querySelector(".mobile-menu");
+        mobileMenu.style.display =
+          mobileMenu.style.display === "flex" || mobileMenu.style.display === ""
+            ? "none"
+            : "flex";
+      }
+
+      // Close the mobile menu when a link or button is clicked
+      var mobileLinks = document.querySelectorAll(
+        ".mobile-menu a, .mobile-menu button"
+      );
+      mobileLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          var mobileMenu = document.querySelector(".mobile-menu");
+          mobileMenu.style.display = "none";
+        });
+      });
+    </script>
+
+    <input name="animation" type="hidden" />
   </body>
 </html>
