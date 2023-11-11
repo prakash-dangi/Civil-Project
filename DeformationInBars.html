@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description" content="">
+    <title>Deformation and Young's Modulus Calculator</title>
+    <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/animatecss/animate.css">
+    <link rel="stylesheet" href="assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="assets/socicon/css/styles.css">
+    <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="stylesheet" href="assets/gallery/style.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+    <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+</head>
+
+<body>
+    <!-- Theory Section -->
+    <section data-bs-version="5.1" class="mbr-section" id="deformation-theory" style="padding-top: 100px;">
+        <div class="container">
+            <div class="mbr-section-head mb-5">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                    <strong>Theory of Deformation and Young's Modulus</strong>
+                </h3>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    In material science and engineering, the deformation (\( \delta \)) in a simple bar under an applied force (\( F \)) can be calculated using Hooke's Law:
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    \[ \delta = \frac{F \cdot L_0}{A \cdot E} \]
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    \[ \mu = -\frac{\varepsilon_{\text{transverse}}}{\varepsilon_{\text{axial}}} \]
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    Where:
+                    - \( \delta \) is the deformation,
+                    - \( F \) is the applied force,
+                    - \( L_0 \) is the initial/original length,
+                    - \( A \) is the cross-sectional area,
+                    - \( E \) is Young's Modulus.
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    Hooke's Law states that the deformation of an elastic material is directly proportional to the applied force within the elastic limit. Young's Modulus (\( E \)) represents the material's stiffness or rigidity.
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    The formula can be rearranged to solve for Young's Modulus (\( E \)):
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    \[ E = \frac{F \cdot L_0}{A \cdot \delta} \]
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    This equation provides a crucial understanding of how materials respond to applied forces, enabling engineers to design structures and predict material behavior under various conditions.
+                </p>    
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section data-bs-version="5.1" class="form5" id="deformation-calculator" style="padding-top: 100px;">
+        <div class="container">
+            <div class="mbr-section-head mb-5">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                    <strong>Deformation and Young's Modulus Calculator</strong>
+                </h3>
+                <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7" style="padding-bottom: 31px;">
+                    Select what you want to calculate:
+                </h4>
+                <select id="calculation-type" class="form-control align-center">
+                    <option value="deformation">\( \delta \) - Deformation</option>
+                    <option value="youngs-modulus">\( E \) - Young's Modulus</option>
+                </select>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                    <form method="POST" class="mbr-form form-with-styler" id="calculator-form">
+                        <div class="row">
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="applied-force">
+                                <input type="text" name="applied-force" placeholder="F"
+                                    data-form-field="applied-force" class="form-control" id="applied-force">
+                            </div>
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="original-length">
+                                <input type="text" name="original-length" placeholder="L0"
+                                    data-form-field="original-length" class="form-control" id="original-length">
+                            </div>
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="cross-sectional-area">
+                                <input type="text" name="cross-sectional-area" placeholder="A"
+                                    data-form-field="cross-sectional-area" class="form-control"
+                                    id="cross-sectional-area">
+                            </div>
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="youngs-modulus">
+                                <input type="text" name="youngs-modulus" placeholder="E/δ"
+                                    data-form-field="youngs-modulus" class="form-control" id="youngs-modulus">
+                            </div>
+                            <div class="col-12 form-group mb-3" data-for="result">
+                                <input type="tel" name="result" placeholder="Result" data-form-field="result"
+                                    class="form-control" id="result" style="text-align: center;" readonly>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
+                                <button type="button" onclick="calculate()" class="btn btn-primary display-7">Calculate</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="Js files\DeformationInBars.js"></script>    
+</body>
+
+</html>

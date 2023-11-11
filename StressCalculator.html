@@ -177,11 +177,56 @@
             </div>
         </div>
     </section>
+    <!-- Thermal Stress Calculator Section -->
+    <section data-bs-version="5.1" class="form5" id="thermal-stress-calculator" style="margin-top: 80px;">
+        <div class="container">
+            <div class="mbr-section-head mb-5">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                    <strong>Thermal Stress Calculator</strong></h3>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <!-- Thermal Stress Calculator Form -->
+                <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                    <form method="POST" class="mbr-form form-with-styler" data-form-title="Thermal Stress Calculator" id="ThermalStressCalculator">
+                        <!-- Add your thermal stress calculator form fields here -->
+                        <!-- Example fields: Temperature Change, Coefficient of Thermal Expansion, etc. -->
+                        <div class="dragArea row">
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="temperature-change">
+                                <input type="text" name="Temperature Change" placeholder="Temperature Change" data-form-field="Temperature Change" class="form-control" value="" id="temperature-change">
+                            </div>
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="thermal-expansion-coefficient">
+                                <input type="text" name="Coefficient of Thermal Expansion" placeholder="Coefficient of Thermal Expansion" data-form-field="Coefficient of Thermal Expansion" class="form-control" value="" id="thermal-expansion-coefficient">
+                            </div>
+                            <div class="col-12 form-group mb-3" data-for="thermal-stress-result">
+                                <input type="tel" name="Thermal Stress" placeholder="Thermal Stress" data-form-field="Thermal Stress" class="form-control" value="" id="thermal-stress-result" style="text-align: center;">
+                            </div>
+
+                            <div class="col-12 form-group mb-3" id="thermal-stress-unit">
+                                <select name="Thermal Stress Unit" class="form-control" id="thermal-unit-selector">
+                                    <option value="pa">Pa</option>
+                                    <option value="mpa">MPa</option>
+                                    <option value="gpa">GPa</option>
+                                    <option value="psi">psi</option>
+                                    <option value="ksi">ksi</option>
+                                </select>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
+                                <button type="submit" class="btn btn-primary display-7">Calculate Thermal Stress</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Include separate JavaScript files for each stress calculator -->
     <script src="Js files\TorsionalStressCalculator.js"></script>
     <script src="Js files\BendingStressCalculator.js"></script>
     <script src="Js files\ShearStressCalculator.js"></script>
     <script src="Js files\CompressiveTensileStressCalculator.js"></script>
+    <script src="Js files\ThermalStressCalculator.js"></script>
+
 </body>
 
 </html>
