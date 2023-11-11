@@ -1,28 +1,388 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v5.9.6, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
-  <meta name="description" content="">
-  <title>Elastic Moduli Calculator</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/animatecss/animate.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="stylesheet" href="assets/gallery/style.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
-  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v5.9.6, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <meta name="description" content="">
+    <title>Elastic Moduli Calculator</title>
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/animatecss/animate.css">
+    <link rel="stylesheet" href="assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="assets/socicon/css/styles.css">
+    <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="stylesheet" href="assets/gallery/style.css">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap">
+    </noscript>
+    <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    <style>
+        .header {
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: #101010;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-item {
+            margin-left: 5rem;
+        }
+
+        footer {
+            background-color: #333;
+            /* Set your desired background color */
+            color: #FFD700;
+            /* Set your desired text color */
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            /* Add some initial margin to footer */
+        }
+
+        .footer-section {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 30px;
+            /* Adjust the margin as needed */
+        }
+
+        .footer-section h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            /* Add more space between headings */
+            color: #fff;
+            /* Set your desired glossy text color */
+        }
+
+        .footer-section p {
+            color: #fff;
+            /* Set your text color */
+            margin-bottom: 8px;
+            /* Add slight space between names */
+        }
+
+        .footer-section a {
+            color: #fff;
+            /* Set your link color */
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            /* Smooth color transition */
+        }
+
+        .footer-section a:hover {
+            color: #FFD700;
+            /* Change link color on hover */
+        }
+
+        .footer-section h2 {
+            color: #FFD700;
+        }
+
+        .footer-section hr {
+            border-top: 1px solid #fff;
+            /* Set the color of the horizontal line */
+            margin: 20px 0;
+        }
+
+        p {
+            color: #fff;
+            /* Set your text color */
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #FFD700;
+            /* Set your desired logo color */
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Style for the "About the Project" button */
+        #about-button {
+            background-color: #FFD700;
+            color: #333;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #about-button {
+            border-radius: 8px;
+            /* Adjust the border-radius value as needed */
+        }
+
+        .dropdown-content {
+            min-width: 180px;
+            /* Adjust the min-width value as needed */
+        }
+
+        nav {
+            background-color: rgba(51, 51, 51, 0.87);
+            /* Adjust the alpha (transparency) value as needed */
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+            /* Add a subtle glowing effect with a yellow color */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            /* Smooth transition for links */
+        }
+
+        nav a:hover {
+            color: #FFD700;
+            background-color: rgba(255, 215, 0, 0.2);
+            /* Add a subtle background glow on hover */
+        }
+
+        .btn-primary {
+            font-size: 25px;
+            padding: 17px 22px;
+        }
+
+        /* Style for the "About the Project" button */
+        #about-button {
+            background-color: #FFD700;
+            color: #333;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        /* Style for the dropdown animation */
+        .dropdown-content {
+            min-width: 180px;
+            display: none;
+            position: absolute;
+            background-color: #333;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            animation: fadeInDown 0.5s ease;
+            /* Fade-in animation */
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Style for the dropdown animation */
+        .dropdown-content {
+            min-width: 180px;
+            display: none;
+            position: absolute;
+            background-color: #333;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            animation: fadeInDown 0.5s ease;
+            /* Fade-in animation */
+            padding: 10px;
+            /* Add padding */
+            border-radius: 8px;
+            /* Add rounded corners */
+        }
+
+        @media only screen and (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 5rem;
+                flex-direction: column;
+                background-color: #555;
+                width: 100%;
+                border-radius: 10px;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-item {
+                margin: 0 1rem;
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+            }
+
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+        }
+
+        /* Responsive styles for smaller screens */
+        @media only screen and (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+        }
+
+        table {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+    </style>
 </head>
+
 <body>
+    <!-- Navigation Bar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Civil<span>Calculator</span></div>
+            <div class="nav-menu">
+                <div class="nav-item">
+                    <div class="dropdown">
+                        <a href="#">Tools</a>
+                        <div class="dropdown-content">
+                            <a href="StressCalculator.html">Stress</a>
+                            <a href="StrainCalculator.html">Strain</a>
+                            <a href="PoissonsRatio.html">Poissons Ratio</a>
+                            <a href="ElasticConstantsCalculator.html">Elastic Moduli</a>
+                            <a href="DeformationInBars.html">Deformation and Young's Modulus</a>
+                            <a href="ElasticModuliPoissonsRatioRelations.html">Moduli and Poissons Ratio </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <div class="dropdown">
+                        <a href="#">Resources</a>
+                        <div class="dropdown-content">
+                            <a href="https://en.wikipedia.org/wiki/Stress_(mechanics)">More on Stress</a>
+                            <a href="https://en.wikipedia.org/wiki/Strain_(mechanics)">More on Strain</a>
+                            <a href="https://en.wikipedia.org/wiki/Poisson%27s_ratio">Poisson's Ratio</a>
+                            <a href="https://en.wikipedia.org/wiki/Young%27s_modulus">About Young's Modulus</a>
+                            <a href="https://en.wikipedia.org/wiki/Deformation_(engineering)">About Deformation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="#">Documentation</a>
+                </div>
+                <div class="nav-item">
+                    <button id="about-button" onclick="scrollToFooter()">About the Project</button>
+                </div>
+                <div class="nav-item">
+                    <a href="#">Suggestions</a>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
     <!--Youngs Modulus theory-->
     <section data-bs-version="5.1" class="mbr-section" id="youngs-modulus-theory" style="padding-top: 100px;">
         <div class="container">
@@ -31,10 +391,14 @@
                     <strong>Youngs's Modulus: Understanding the Mechanics of Elasticity</strong>
                 </h3>
                 <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                    Young's Modulus (E) is a fundamental concept in the field of material science and engineering, providing insights into the mechanical behavior of materials under stress and strain.
+                    Young's Modulus (E) is a fundamental concept in the field of material science and engineering,
+                    providing insights into the mechanical behavior of materials under stress and strain.
                 </p>
                 <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                    <b>Definition:</b> Young's Modulus, also known as the modulus of elasticity, is a measure of a material's stiffness. It represents the ratio of stress to strain within the elastic limit of the material. In other words, it quantifies how much a material will deform under a given amount of stress.
+                    <b>Definition:</b> Young's Modulus, also known as the modulus of elasticity, is a measure of a
+                    material's stiffness. It represents the ratio of stress to strain within the elastic limit of the
+                    material. In other words, it quantifies how much a material will deform under a given amount of
+                    stress.
                 </p>
                 <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
                     <b>Mathematical Formulation:</b> The mathematical expression for Young's Modulus is given by:
@@ -49,243 +413,475 @@
                     - \(\text{{Strain}}\) is the resulting deformation or change in length per unit length.
                 </p>
                 <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                    <b>Interpretation:</b> A higher Young's Modulus indicates a stiffer material, meaning it will experience less deformation for a given applied force. Conversely, a lower modulus suggests a more flexible material.
+                    <b>Interpretation:</b> A higher Young's Modulus indicates a stiffer material, meaning it will
+                    experience less deformation for a given applied force. Conversely, a lower modulus suggests a more
+                    flexible material.
                 </p>
                 <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                    <b>Applications:</b> Understanding Young's Modulus is crucial in various engineering applications, such as designing structures, selecting materials for specific purposes, and predicting how materials will behave under different conditions. For instance, in the aerospace industry, knowledge of Young's Modulus helps engineers choose materials that can withstand the stresses experienced during flight.
+                    <b>Applications:</b> Understanding Young's Modulus is crucial in various engineering applications,
+                    such as designing structures, selecting materials for specific purposes, and predicting how
+                    materials will behave under different conditions. For instance, in the aerospace industry, knowledge
+                    of Young's Modulus helps engineers choose materials that can withstand the stresses experienced
+                    during flight.
                 </p>
                 <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                    <b>Limitations:</b> It's important to note that Young's Modulus assumes linear elasticity, meaning the material behaves elastically and returns to its original shape after the stress is removed. Real-world materials may exhibit non-linear behavior under certain conditions, and in those cases, more advanced material models may be necessary.
+                    <b>Limitations:</b> It's important to note that Young's Modulus assumes linear elasticity, meaning
+                    the material behaves elastically and returns to its original shape after the stress is removed.
+                    Real-world materials may exhibit non-linear behavior under certain conditions, and in those cases,
+                    more advanced material models may be necessary.
                 </p>
             </div>
         </div>
     </section>
-        
+
     <!--Youngs Modulus Calculator-->
-<section data-bs-version="5.1" class="form5" id="youngs-modulus-form" style="padding-top: 100px;">
-    <div class="container">
-        <div class="mbr-section-head mb-5">
-            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                <strong>Young's Modulus Calculator</strong>
-            </h3>
-            <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                Enter the applied force, original length, and change in length to calculate Young's Modulus.
-            </h4>
-        </div>
-        <div class="row justify-content-center mt-4">
-            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                <form method="POST" class="mbr-form form-with-styler"
-                      data-form-title="Young's Modulus Calculator" id="youngs-modulus-form">
-                    <input type="hidden" name="email" data-form-email="true" value="your-email@example.com">
-                    <div class="row">
-                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
-                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                            Oops...! some problem!
+    <section data-bs-version="5.1" class="form5" id="youngs-modulus-form" style="padding-top: 100px;">
+        <div class="container">
+            <div class="mbr-section-head mb-5">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                    <strong>Young's Modulus Calculator</strong>
+                </h3>
+                <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    Enter the applied force, original length, and change in length to calculate Young's Modulus.
+                </h4>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                    <form method="POST" class="mbr-form form-with-styler" data-form-title="Young's Modulus Calculator"
+                        id="youngs-modulus-form">
+                        <input type="hidden" name="email" data-form-email="true" value="your-email@example.com">
+                        <div class="row">
+                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for
+                                filling out the form!</div>
+                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                                Oops...! some problem!
+                            </div>
                         </div>
-                    </div>
-                    <div class="dragArea row">
-                        <div class="col-md col-sm-12 form-group mb-3" data-for="applied-force">
-                            <input type="text" name="Applied Force" placeholder="Applied Force"
-                                   data-form-field="Applied Force" class="form-control" value="" id="applied-force">
+                        <div class="dragArea row">
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="applied-force">
+                                <input type="text" name="Applied Force" placeholder="Applied Force"
+                                    data-form-field="Applied Force" class="form-control" value="" id="applied-force">
+                            </div>
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="original-length">
+                                <input type="text" name="Original Length" placeholder="Original Length"
+                                    data-form-field="Original Length" class="form-control" value=""
+                                    id="original-length">
+                            </div>
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="change-in-length">
+                                <input type="text" name="Change in Length" placeholder="Change in Length"
+                                    data-form-field="Change in Length" class="form-control" value=""
+                                    id="change-in-length">
+                            </div>
+                            <div class="col-12 form-group mb-3" data-for="youngs-modulus-result">
+                                <input type="tel" name="Young's Modulus" placeholder="Young's Modulus"
+                                    data-form-field="Young's Modulus" class="form-control" value=""
+                                    id="youngs-modulus-result" style="text-align: center;">
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
+                                <button type="submit" class="btn btn-primary display-7">Calculate</button>
+                            </div>
                         </div>
-                        <div class="col-md col-sm-12 form-group mb-3" data-for="original-length">
-                            <input type="text" name="Original Length" placeholder="Original Length"
-                                   data-form-field="Original Length" class="form-control" value="" id="original-length">
-                        </div>
-                        <div class="col-md col-sm-12 form-group mb-3" data-for="change-in-length">
-                            <input type="text" name="Change in Length" placeholder="Change in Length"
-                                   data-form-field="Change in Length" class="form-control" value="" id="change-in-length">
-                        </div>
-                        <div class="col-12 form-group mb-3" data-for="youngs-modulus-result">
-                            <input type="tel" name="Young's Modulus" placeholder="Young's Modulus"
-                                   data-form-field="Young's Modulus" class="form-control" value="" id="youngs-modulus-result"
-                                   style="text-align: center;">
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
-                            <button type="submit" class="btn btn-primary display-7">Calculate</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<!--Shear Modulus Theory-->
-<section data-bs-version="5.1" class="mbr-section" id="shear-modulus-theory" style="padding-top: 100px;">
-    <div class="container">
-        <div class="mbr-section-head mb-5">
-            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                <strong>Shear Modulus (G): Unraveling the Material's Resistance to Shear Stress</strong>
-            </h3>
-            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                Shear Modulus, denoted as G, is a crucial parameter in material science and engineering that characterizes how a material responds to shear stress – a force applied parallel to the surface of an object.
-            </p>
-            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                <b>Definition:</b> Shear Modulus quantifies the material's rigidity or resistance to deformation when subjected to a shear stress. It is defined as the ratio of shear stress to shear strain within the elastic limit.
-            </p>
-            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                <b>Mathematical Formulation:</b> The formula for Shear Modulus is given by:
-            </p>
-            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                \[ G = \frac{{\text{{Shear Stress}}}}{{\text{{Shear Strain}}}} \]
-            </p>
-            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                Where:
-                - \( G \) is the Shear Modulus,
-                - \(\text{{Shear Stress}}\) is the force applied parallel to the surface,
-                - \(\text{{Shear Strain}}\) is the resulting deformation relative to the original shape.
-            </p>
-            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                <b>Physical Interpretation:</b> A higher Shear Modulus indicates greater resistance to deformation under shear stress, reflecting a stiffer material. It is particularly relevant in scenarios where materials are subjected to twisting or torsional forces.
-            </p>
-            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                <b>Real-world Applications:</b> Shear Modulus plays a pivotal role in designing structures like bridges, beams, and shafts, where resistance to shear forces is crucial. In the automotive industry, understanding the shear modulus is vital for designing components that can withstand torsional loads.
-            </p>
-            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                <b>Limitations:</b> Similar to Young's Modulus, the shear modulus assumes linear elasticity. In practice, materials may exhibit non-linear behavior under extreme conditions, necessitating advanced material models for accurate predictions.
-            </p>
+    </section>
+    <!--Shear Modulus Theory-->
+    <section data-bs-version="5.1" class="mbr-section" id="shear-modulus-theory" style="padding-top: 100px;">
+        <div class="container">
+            <div class="mbr-section-head mb-5">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                    <strong>Shear Modulus (G): Unraveling the Material's Resistance to Shear Stress</strong>
+                </h3>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    Shear Modulus, denoted as G, is a crucial parameter in material science and engineering that
+                    characterizes how a material responds to shear stress – a force applied parallel to the surface of
+                    an object.
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    <b>Definition:</b> Shear Modulus quantifies the material's rigidity or resistance to deformation
+                    when subjected to a shear stress. It is defined as the ratio of shear stress to shear strain within
+                    the elastic limit.
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    <b>Mathematical Formulation:</b> The formula for Shear Modulus is given by:
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    \[ G = \frac{{\text{{Shear Stress}}}}{{\text{{Shear Strain}}}} \]
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    Where:
+                    - \( G \) is the Shear Modulus,
+                    - \(\text{{Shear Stress}}\) is the force applied parallel to the surface,
+                    - \(\text{{Shear Strain}}\) is the resulting deformation relative to the original shape.
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    <b>Physical Interpretation:</b> A higher Shear Modulus indicates greater resistance to deformation
+                    under shear stress, reflecting a stiffer material. It is particularly relevant in scenarios where
+                    materials are subjected to twisting or torsional forces.
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    <b>Real-world Applications:</b> Shear Modulus plays a pivotal role in designing structures like
+                    bridges, beams, and shafts, where resistance to shear forces is crucial. In the automotive industry,
+                    understanding the shear modulus is vital for designing components that can withstand torsional
+                    loads.
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    <b>Limitations:</b> Similar to Young's Modulus, the shear modulus assumes linear elasticity. In
+                    practice, materials may exhibit non-linear behavior under extreme conditions, necessitating advanced
+                    material models for accurate predictions.
+                </p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!--Shear Modulus Calculator-->
-<section data-bs-version="5.1" class="form5" id="shear-modulus-form" style="padding-top: 100px;">
-    <div class="container">
-        <div class="mbr-section-head mb-5">
-            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                <strong>Shear Modulus Calculator</strong>
-            </h3>
-            <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                Enter the shear stress and shear strain to calculate Shear Modulus (G).
-            </h4>
-        </div>
-        <div class="row justify-content-center mt-4">
-            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                <form method="POST" class="mbr-form form-with-styler"
-                      data-form-title="Shear Modulus Calculator" id="shear-modulus-form">
-                    <input type="hidden" name="email" data-form-email="true" value="your-email@example.com">
-                    <div class="row">
-                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
-                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                            Oops...! some problem!
+    <!--Shear Modulus Calculator-->
+    <section data-bs-version="5.1" class="form5" id="shear-modulus-form" style="padding-top: 100px;">
+        <div class="container">
+            <div class="mbr-section-head mb-5">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                    <strong>Shear Modulus Calculator</strong>
+                </h3>
+                <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    Enter the shear stress and shear strain to calculate Shear Modulus (G).
+                </h4>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                    <form method="POST" class="mbr-form form-with-styler" data-form-title="Shear Modulus Calculator"
+                        id="shear-modulus-form">
+                        <input type="hidden" name="email" data-form-email="true" value="your-email@example.com">
+                        <div class="row">
+                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for
+                                filling out the form!</div>
+                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                                Oops...! some problem!
+                            </div>
                         </div>
-                    </div>
-                    <div class="dragArea row">
-                        <div class="col-md col-sm-12 form-group mb-3" data-for="shear-stress">
-                            <input type="text" name="Shear Stress" placeholder="Shear Stress"
-                                   data-form-field="Shear Stress" class="form-control" value="" id="shear-stress">
+                        <div class="dragArea row">
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="shear-stress">
+                                <input type="text" name="Shear Stress" placeholder="Shear Stress"
+                                    data-form-field="Shear Stress" class="form-control" value="" id="shear-stress">
+                            </div>
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="shear-strain">
+                                <input type="text" name="Shear Strain" placeholder="Shear Strain"
+                                    data-form-field="Shear Strain" class="form-control" value="" id="shear-strain">
+                            </div>
+                            <div class="col-12 form-group mb-3" data-for="shear-modulus-result">
+                                <input type="tel" name="Shear Modulus" placeholder="Shear Modulus"
+                                    data-form-field="Shear Modulus" class="form-control" value=""
+                                    id="shear-modulus-result" style="text-align: center;">
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
+                                <button type="submit" class="btn btn-primary display-7">Calculate</button>
+                            </div>
                         </div>
-                        <div class="col-md col-sm-12 form-group mb-3" data-for="shear-strain">
-                            <input type="text" name="Shear Strain" placeholder="Shear Strain"
-                                   data-form-field="Shear Strain" class="form-control" value="" id="shear-strain">
-                        </div>
-                        <div class="col-12 form-group mb-3" data-for="shear-modulus-result">
-                            <input type="tel" name="Shear Modulus" placeholder="Shear Modulus"
-                                   data-form-field="Shear Modulus" class="form-control" value="" id="shear-modulus-result"
-                                   style="text-align: center;">
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
-                            <button type="submit" class="btn btn-primary display-7">Calculate</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<script src="Js files\ShearModulusCalculator.js"></script>
-<!--Bulk Modulus Theory-->
-<section data-bs-version="5.1" class="mbr-section" id="bulk-modulus-theory" style="padding-top: 100px;">
-    <div class="container">
-        <div class="mbr-section-head mb-5">
-            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                <strong>Bulk Modulus (K): Unveiling Material Response to Uniform Pressure</strong>
-            </h3>
-            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                Bulk Modulus, denoted as K, is a fundamental property in material science that characterizes how a material responds to changes in volume under the influence of uniform pressure.
-            </p>
-            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                <b>Definition:</b> Bulk Modulus measures a material's resistance to uniform compression or expansion. It is defined as the ratio of change in pressure to the fractional change in volume.
-            </p>
-            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                <b>Mathematical Formulation:</b> The formula for Bulk Modulus is given by:
-            </p>
-            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                \[ K = -V \frac{{dP}}{{dV}} \]
-            </p>
-            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                Where:
-                - \( K \) is the Bulk Modulus,
-                - \( V \) is the volume of the material,
-                - \(\frac{{dP}}{{dV}}\) is the rate of change of pressure with respect to volume.
-            </p>
-            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                <b>Physical Interpretation:</b> A higher Bulk Modulus indicates that the material is less compressible and more resistant to volume changes under pressure.
-            </p>
-            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                <b>Real-world Applications:</b> Bulk Modulus is crucial in various applications, such as designing hydraulic systems, understanding the behavior of liquids and gases under pressure, and predicting the response of materials to external forces.
-            </p>
-            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                <b>Limitations:</b> The model assumes isotropy and linear elasticity, and real materials may deviate from these assumptions under extreme conditions.
-            </p>
+    </section>
+    <script src="Js files\ShearModulusCalculator.js"></script>
+    <!--Bulk Modulus Theory-->
+    <section data-bs-version="5.1" class="mbr-section" id="bulk-modulus-theory" style="padding-top: 100px;">
+        <div class="container">
+            <div class="mbr-section-head mb-5">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                    <strong>Bulk Modulus (K): Unveiling Material Response to Uniform Pressure</strong>
+                </h3>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    Bulk Modulus, denoted as K, is a fundamental property in material science that characterizes how a
+                    material responds to changes in volume under the influence of uniform pressure.
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    <b>Definition:</b> Bulk Modulus measures a material's resistance to uniform compression or
+                    expansion. It is defined as the ratio of change in pressure to the fractional change in volume.
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    <b>Mathematical Formulation:</b> The formula for Bulk Modulus is given by:
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    \[ K = -V \frac{{dP}}{{dV}} \]
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    Where:
+                    - \( K \) is the Bulk Modulus,
+                    - \( V \) is the volume of the material,
+                    - \(\frac{{dP}}{{dV}}\) is the rate of change of pressure with respect to volume.
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    <b>Physical Interpretation:</b> A higher Bulk Modulus indicates that the material is less
+                    compressible and more resistant to volume changes under pressure.
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    <b>Real-world Applications:</b> Bulk Modulus is crucial in various applications, such as designing
+                    hydraulic systems, understanding the behavior of liquids and gases under pressure, and predicting
+                    the response of materials to external forces.
+                </p>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    <b>Limitations:</b> The model assumes isotropy and linear elasticity, and real materials may deviate
+                    from these assumptions under extreme conditions.
+                </p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!--Bulk Modulus Calculator-->
-<section data-bs-version="5.1" class="form5" id="bulk-modulus-form" style="padding-top: 100px; padding-bottom: 65px;">
-    <div class="container">
-        <div class="mbr-section-head mb-5">
-            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                <strong>Bulk Modulus Calculator</strong>
-            </h3>
-            <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                Enter the initial volume, change in volume, and change in pressure to calculate Bulk Modulus (K).
-            </h4>
-            <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                <strong>Convention:</strong> The negative sign in the result indicates compression. For expansion, the result would be positive.
-            </p>
-        </div>
-        <div class="row justify-content-center mt-4">
-            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                <form method="POST" class="mbr-form form-with-styler"
-                      data-form-title="Bulk Modulus Calculator" id="bulk-modulus-form">
-                    <input type="hidden" name="email" data-form-email="true" value="your-email@example.com">
-                    <div class="row">
-                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
-                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                            Oops...! some problem!
+    <!--Bulk Modulus Calculator-->
+    <section data-bs-version="5.1" class="form5" id="bulk-modulus-form"
+        style="padding-top: 100px; padding-bottom: 65px;">
+        <div class="container">
+            <div class="mbr-section-head mb-5">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                    <strong>Bulk Modulus Calculator</strong>
+                </h3>
+                <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    Enter the initial volume, change in volume, and change in pressure to calculate Bulk Modulus (K).
+                </h4>
+                <p class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    <strong>Convention:</strong> The negative sign in the result indicates compression. For expansion,
+                    the result would be positive.
+                </p>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                    <form method="POST" class="mbr-form form-with-styler" data-form-title="Bulk Modulus Calculator"
+                        id="bulk-modulus-form">
+                        <input type="hidden" name="email" data-form-email="true" value="your-email@example.com">
+                        <div class="row">
+                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for
+                                filling out the form!</div>
+                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                                Oops...! some problem!
+                            </div>
                         </div>
-                    </div>
-                    <div class="dragArea row">
-                        <div class="col-md col-sm-12 form-group mb-3" data-for="initial-volume">
-                            <input type="text" name="Initial Volume" placeholder="Initial Volume"
-                                   data-form-field="Initial Volume" class="form-control" value="" id="initial-volume">
+                        <div class="dragArea row">
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="initial-volume">
+                                <input type="text" name="Initial Volume" placeholder="Initial Volume"
+                                    data-form-field="Initial Volume" class="form-control" value="" id="initial-volume">
+                            </div>
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="change-in-volume">
+                                <input type="text" name="Change in Volume" placeholder="Change in Volume"
+                                    data-form-field="Change in Volume" class="form-control" value=""
+                                    id="change-in-volume">
+                            </div>
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="change-in-pressure">
+                                <input type="text" name="Change in Pressure" placeholder="Change in Pressure"
+                                    data-form-field="Change in Pressure" class="form-control" value=""
+                                    id="change-in-pressure">
+                            </div>
+                            <div class="col-12 form-group mb-3" data-for="bulk-modulus-result">
+                                <input type="tel" name="Bulk Modulus" placeholder="Bulk Modulus"
+                                    data-form-field="Bulk Modulus" class="form-control" value=""
+                                    id="bulk-modulus-result" style="text-align: center;">
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
+                                <button type="submit" class="btn btn-primary display-7">Calculate</button>
+                            </div>
                         </div>
-                        <div class="col-md col-sm-12 form-group mb-3" data-for="change-in-volume">
-                            <input type="text" name="Change in Volume" placeholder="Change in Volume"
-                                   data-form-field="Change in Volume" class="form-control" value="" id="change-in-volume">
-                        </div>
-                        <div class="col-md col-sm-12 form-group mb-3" data-for="change-in-pressure">
-                            <input type="text" name="Change in Pressure" placeholder="Change in Pressure"
-                                   data-form-field="Change in Pressure" class="form-control" value="" id="change-in-pressure">
-                        </div>
-                        <div class="col-12 form-group mb-3" data-for="bulk-modulus-result">
-                            <input type="tel" name="Bulk Modulus" placeholder="Bulk Modulus"
-                                   data-form-field="Bulk Modulus" class="form-control" value="" id="bulk-modulus-result"
-                                   style="text-align: center;">
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
-                            <button type="submit" class="btn btn-primary display-7">Calculate</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<script src="Js files\BulkModulusCalculator.js"></script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="Js files\YoungsModulusCalculator.js"></script>
+    </section>
+    <footer>
+        <div class="footer-section">
+            <h2>Team Members</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Role</th>
+                        <th>Roll Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jitesh Patel</td>
+                        <td>Documentation & Research</td>
+                        <td>23BCP196</td>
+                    </tr>
+                    <tr>
+                        <td>Shardul Jani</td>
+                        <td>Development and Design</td>
+                        <td>23BCP225</td>
+                    </tr>
+                    <tr>
+                        <td>Prasanna Vijh</td>
+                        <td>Documentation & Research</td>
+                        <td>23BCP235</td>
+                    </tr>
+                    <tr>
+                        <td>Dev Patel</td>
+                        <td>Documentation & Research</td>
+                        <td>23BCP237</td>
+                    </tr>
+                    <tr>
+                        <td>Prakash Dangi</td>
+                        <td>Development & Design</td>
+                        <td>23BCP239</td>
+                    </tr>
+                    <tr>
+                        <td>Nidhi Baldaniya</td>
+                        <td>&nbsp;Documentation & Research</td>
+                        <td>23BCP240</td>
+                    </tr>
+                    <tr>
+                        <td>Meet Rathod</td>
+                        <td>Development & Design</td>
+                        <td>23BCP241</td>
+                    </tr>
+                    <!-- Add similar rows for other team members -->
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="footer-section">
+            <h2>Calculators</h2>
+            <a href="StressCalculator.html">Stress</a>
+            <a href="StrainCalculator.html">Strain</a>
+            <a href="DeformationInBars.html">Deformation and Young's Modulus</a>
+            <a href="PoissonsRatio.html">Poissons Ratio</a>
+            <a href="ElasticConstantsCalculator.html">Elastic Moduli</a>
+            <a href="ElasticModuliPoissonsRatioRelations.html">Moduli and Poissons Ratio</a>
+        </div>
+
+        <div class="footer-section">
+            <h2>Documentation</h2>
+            <a href="#">Link to PDF 1</a>
+            <a href="#">Link to PDF 2</a>
+            <!-- Add similar lines for other documentation links -->
+        </div>
+
+        <div class="footer-section">
+            <h2>Submitted To</h2>
+            <p>Dr. Ayyanna Habal</p>
+            <p>Ph.D., IIT Bombay</p>
+            <p>Assistant Professor,
+                Department of Civil Engineering, SOT,
+                Pandit Deendayal Energy University (PDEU)</p>
+        </div>
+
+        <hr>
+
+        <p>Pandit Deendayal Energy University (PDEU)
+            Gandhinagar, Gujarat - 382007</p>
+    </footer>
+    </section>
+
+    <script>
+        // JavaScript to adjust the margin-top of the footer based on the height of the button section
+        document.addEventListener("DOMContentLoaded", function () {
+            var buttonSection = document.getElementById("button-section");
+            var footer = document.querySelector("footer");
+
+            // Set initial margin-top for the footer
+            footer.style.marginTop = buttonSection.clientHeight + "px";
+
+            // Update margin-top on window resize
+            window.addEventListener("resize", function () {
+                footer.style.marginTop = buttonSection.clientHeight + "px";
+            });
+        });
+    </script>
+    <!-- JavaScript for scrolling to the footer -->
+    <script>
+        function scrollToFooter() {
+            var footer = document.querySelector("footer");
+            footer.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var nav = document.querySelector("nav");
+
+            // Update the navigation bar style on scroll
+            window.addEventListener("scroll", function () {
+                var scrollPos = window.scrollY;
+
+                if (scrollPos > 50) {
+                    // Add a shadow and change background color when scrolling down
+                    nav.style.background = "rgba(51, 51, 51, 0.9)";
+                    nav.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+                } else {
+                    // Reset styles when at the top of the page
+                    nav.style.background = "rgba(51, 51, 51, 0.8)";
+                    nav.style.boxShadow = "none";
+                }
+            });
+
+            // Keep the navigation bar fixed at the top
+            var navOffsetTop = nav.offsetTop;
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY >= navOffsetTop) {
+                    nav.style.position = "fixed";
+                    nav.style.width = "100%";
+                    nav.style.top = "0";
+                    nav.style.zIndex = "1000";
+                } else {
+                    nav.style.position = "";
+                    nav.style.width = "";
+                    nav.style.top = "";
+                    nav.style.zIndex = "";
+                }
+            });
+        });
+    </script>
+    <script>
+        function showDropdown() {
+            var dropdownContent = document.querySelector(".dr opdown-content");
+            dropdownContent.style.display = "block";
+        }
+
+        function hideDropdown() {
+            var dropdownContent = document.querySelector(".dropdown-content");
+            dropdownContent.style.display = "none";
+        }
+    </script>
+
+    <script>
+        function toggleMenu() {
+            var mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.style.display = (mobileMenu.style.display === 'flex' || mobileMenu.style.display === '') ? 'none' : 'flex';
+        }
+
+        // Close the mobile menu when a link or button is clicked
+        var mobileLinks = document.querySelectorAll('.mobile-menu a, .mobile-menu button');
+        mobileLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                var mobileMenu = document.querySelector('.mobile-menu');
+                mobileMenu.style.display = 'none';
+            });
+        });
+    </script>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+    </script>
+
+    <script>
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
+    <script src="Js files\BulkModulusCalculator.js"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="Js files\YoungsModulusCalculator.js"></script>
 </body>
+
 </html>

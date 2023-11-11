@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,18 +16,377 @@
     <link rel="stylesheet" href="assets/socicon/css/styles.css">
     <link rel="stylesheet" href="assets/theme/css/style.css">
     <link rel="stylesheet" href="assets/gallery/style.css">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-    <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap">
+    </noscript>
+    <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
     <style>
         .error-message {
             margin-top: 5px;
             color: red;
             font-size: 14px;
         }
+
+        .header {
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: #101010;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-item {
+            margin-left: 5rem;
+        }
+
+        footer {
+            background-color: #333;
+            /* Set your desired background color */
+            color: #FFD700;
+            /* Set your desired text color */
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            /* Add some initial margin to footer */
+        }
+
+        .footer-section {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 30px;
+            /* Adjust the margin as needed */
+        }
+
+        .footer-section h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            /* Add more space between headings */
+            color: #fff;
+            /* Set your desired glossy text color */
+        }
+
+        .footer-section p {
+            color: #fff;
+            /* Set your text color */
+            margin-bottom: 8px;
+            /* Add slight space between names */
+        }
+
+        .footer-section a {
+            color: #fff;
+            /* Set your link color */
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            /* Smooth color transition */
+        }
+
+        .footer-section a:hover {
+            color: #FFD700;
+            /* Change link color on hover */
+        }
+
+        .footer-section h2 {
+            color: #FFD700;
+        }
+
+        .footer-section hr {
+            border-top: 1px solid #fff;
+            /* Set the color of the horizontal line */
+            margin: 20px 0;
+        }
+
+        p {
+            color: #fff;
+            /* Set your text color */
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #FFD700;
+            /* Set your desired logo color */
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Style for the "About the Project" button */
+        #about-button {
+            background-color: #FFD700;
+            color: #333;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #about-button {
+            border-radius: 8px;
+            /* Adjust the border-radius value as needed */
+        }
+
+        .dropdown-content {
+            min-width: 180px;
+            /* Adjust the min-width value as needed */
+        }
+
+        nav {
+            background-color: rgba(51, 51, 51, 0.87);
+            /* Adjust the alpha (transparency) value as needed */
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+            /* Add a subtle glowing effect with a yellow color */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            /* Smooth transition for links */
+        }
+
+        nav a:hover {
+            color: #FFD700;
+            background-color: rgba(255, 215, 0, 0.2);
+            /* Add a subtle background glow on hover */
+        }
+
+        .btn-primary {
+            font-size: 25px;
+            padding: 17px 22px;
+        }
+
+        /* Style for the "About the Project" button */
+        #about-button {
+            background-color: #FFD700;
+            color: #333;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        /* Style for the dropdown animation */
+        .dropdown-content {
+            min-width: 180px;
+            display: none;
+            position: absolute;
+            background-color: #333;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            animation: fadeInDown 0.5s ease;
+            /* Fade-in animation */
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Style for the dropdown animation */
+        .dropdown-content {
+            min-width: 180px;
+            display: none;
+            position: absolute;
+            background-color: #333;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            animation: fadeInDown 0.5s ease;
+            /* Fade-in animation */
+            padding: 10px;
+            /* Add padding */
+            border-radius: 8px;
+            /* Add rounded corners */
+        }
+
+        @media only screen and (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 5rem;
+                flex-direction: column;
+                background-color: #555;
+                width: 100%;
+                border-radius: 10px;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-item {
+                margin: 0 1rem;
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+            }
+
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+        }
+
+        /* Responsive styles for smaller screens */
+        @media only screen and (max-width: 768px) {
+            nav {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+        }
+
+        table {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
     </style>
 </head>
+
 <body>
+    <!-- Navigation Bar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Civil<span>Calculator</span></div>
+            <div class="nav-menu">
+                <div class="nav-item">
+                    <div class="dropdown">
+                        <a href="#">Tools</a>
+                        <div class="dropdown-content">
+                            <a href="StressCalculator.html">Stress</a>
+                            <a href="StrainCalculator.html">Strain</a>
+                            <a href="PoissonsRatio.html">Poissons Ratio</a>
+                            <a href="ElasticConstantsCalculator.html">Elastic Moduli</a>
+                            <a href="DeformationInBars.html">Deformation and Young's Modulus</a>
+                            <a href="ElasticModuliPoissonsRatioRelations.html">Moduli and Poissons Ratio </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <div class="dropdown">
+                        <a href="#">Resources</a>
+                        <div class="dropdown-content">
+                            <a href="https://en.wikipedia.org/wiki/Stress_(mechanics)">More on Stress</a>
+                            <a href="https://en.wikipedia.org/wiki/Strain_(mechanics)">More on Strain</a>
+                            <a href="https://en.wikipedia.org/wiki/Poisson%27s_ratio">Poisson's Ratio</a>
+                            <a href="https://en.wikipedia.org/wiki/Young%27s_modulus">About Young's Modulus</a>
+                            <a href="https://en.wikipedia.org/wiki/Deformation_(engineering)">About Deformation</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a href="#">Documentation</a>
+                </div>
+                <div class="nav-item">
+                    <button id="about-button" onclick="scrollToFooter()">About the Project</button>
+                </div>
+                <div class="nav-item">
+                    <a href="#">Suggestions</a>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
     <section data-bs-version="5.1" class="mbr-section" id="elastic-moduli-calculator" style="padding-top: 100px;">
         <div class="container">
             <div class="mbr-section-head mb-5">
@@ -57,7 +417,8 @@
                             \[ E = 2G(1 + \mu) \]
                         </p>
                         <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
-                            where \( E \) is the Elastic Modulus, \( G \) is the Rigidity Modulus, and \( \mu \) is Poisson's Ratio.
+                            where \( E \) is the Elastic Modulus, \( G \) is the Rigidity Modulus, and \( \mu \) is
+                            Poisson's Ratio.
                         </p>
 
                         <!-- Rigidity Modulus (G) -->
@@ -72,7 +433,8 @@
                             \[ G = \frac{E}{2(1 + \mu)} \]
                         </p>
                         <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
-                            where \( G \) is the Rigidity Modulus, \( E \) is the Elastic Modulus, and \( \mu \) is Poisson's Ratio.
+                            where \( G \) is the Rigidity Modulus, \( E \) is the Elastic Modulus, and \( \mu \) is
+                            Poisson's Ratio.
                         </p>
 
                         <!-- Bulk Modulus (K) -->
@@ -81,13 +443,15 @@
                         </h4>
                         <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
                             Bulk Modulus measures the material's resistance to uniform compression or expansion. It is
-                            related to the hydrostatic stress and volumetric strain in a material. The formula is given by:
+                            related to the hydrostatic stress and volumetric strain in a material. The formula is given
+                            by:
                         </p>
                         <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
                             \[ K = \frac{E}{3(1 - 2\mu)} \]
                         </p>
                         <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
-                            where \( K \) is the Bulk Modulus, \( E \) is the Elastic Modulus, and \( \mu \) is Poisson's Ratio.
+                            where \( K \) is the Bulk Modulus, \( E \) is the Elastic Modulus, and \( \mu \) is
+                            Poisson's Ratio.
                         </p>
 
                         <!-- Poisson's Ratio (μ) -->
@@ -95,14 +459,17 @@
                             <strong>Poisson's Ratio (\(\mu\))</strong>
                         </h4>
                         <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
-                            Poisson's Ratio measures the deformation in the direction perpendicular to the applied force.
-                            It is the ratio of transverse contraction strain to longitudinal extension strain. The formula is given by:
+                            Poisson's Ratio measures the deformation in the direction perpendicular to the applied
+                            force.
+                            It is the ratio of transverse contraction strain to longitudinal extension strain. The
+                            formula is given by:
                         </p>
                         <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
                             \[ \mu = \frac{E}{2G} - 1 \]
                         </p>
                         <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
-                            where \( \mu \) is Poisson's Ratio, \( E \) is the Elastic Modulus, and \( G \) is the Rigidity Modulus.
+                            where \( \mu \) is Poisson's Ratio, \( E \) is the Elastic Modulus, and \( G \) is the
+                            Rigidity Modulus.
                         </p>
 
                         <!-- Calculator Section -->
@@ -118,10 +485,13 @@
                                 <div class="container">
                                     <div class="row justify-content-center mt-4">
                                         <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                                            <form method="POST" class="mbr-form form-with-styler" id="elastic-moduli-form">
+                                            <form method="POST" class="mbr-form form-with-styler"
+                                                id="elastic-moduli-form">
                                                 <div class="dragArea row">
-                                                    <div class="col-md col-sm-12 form-group mb-3" data-for="parameter-select">
-                                                        <label for="parameter-select" class="form-label">Select Parameter:</label>
+                                                    <div class="col-md col-sm-12 form-group mb-3"
+                                                        data-for="parameter-select">
+                                                        <label for="parameter-select" class="form-label">Select
+                                                            Parameter:</label>
                                                         <select class="form-control" id="parameter-select" required>
                                                             <option value="" disabled selected>Select Parameter</option>
                                                             <option value="E">Elastic Modulus (E)</option>
@@ -129,45 +499,55 @@
                                                             <option value="K">Bulk Modulus (K)</option>
                                                             <option value="mu">Poisson's Ratio (\(\mu\))</option>
                                                         </select>
-                                                        <div class="col-md col-sm-12 form-group mb-3" data-for="known-values">
-                                                            <label for="known-values" class="form-label">Enter Known Values:</label>
+                                                        <div class="col-md col-sm-12 form-group mb-3"
+                                                            data-for="known-values">
+                                                            <label for="known-values" class="form-label">Enter Known
+                                                                Values:</label>
                                                             <div class="row">
                                                                 <div class="col">
                                                                     <label for="known-e">E:</label>
-                                                                    <input type="text" name="known-e" placeholder="E" 
-                                                                        data-form-field="known-e" class="form-control" value="" id="known-e">
+                                                                    <input type="text" name="known-e" placeholder="E"
+                                                                        data-form-field="known-e" class="form-control"
+                                                                        value="" id="known-e">
                                                                 </div>
                                                                 <div class="col">
                                                                     <label for="known-g">G:</label>
-                                                                    <input type="text" name="known-g" placeholder="G" 
-                                                                        data-form-field="known-g" class="form-control" value="" id="known-g">
+                                                                    <input type="text" name="known-g" placeholder="G"
+                                                                        data-form-field="known-g" class="form-control"
+                                                                        value="" id="known-g">
                                                                 </div>
                                                                 <div class="col">
                                                                     <label for="known-k">K:</label>
-                                                                    <input type="text" name="known-k" placeholder="K" 
-                                                                        data-form-field="known-k" class="form-control" value="" id="known-k">
+                                                                    <input type="text" name="known-k" placeholder="K"
+                                                                        data-form-field="known-k" class="form-control"
+                                                                        value="" id="known-k">
                                                                 </div>
                                                                 <div class="col">
                                                                     <label for="known-mu">μ:</label>
-                                                                    <input type="text" name="known-mu" placeholder="μ   " 
-                                                                        data-form-field="known-mu" class="form-control" value="" id="known-mu">
+                                                                    <input type="text" name="known-mu"
+                                                                        placeholder="μ   " data-form-field="known-mu"
+                                                                        class="form-control" value="" id="known-mu">
                                                                 </div>
                                                             </div>
                                                             <small id="known-values-help" class="form-text text-muted">
-                                                                Enter numeric values for each known variable. Leave the space blank for the variable you want to calculate.
+                                                                Enter numeric values for each known variable. Leave the
+                                                                space blank for the variable you want to calculate.
                                                             </small>
                                                         </div>
                                                         <div class="col-md col-sm-12 form-group mb-3" data-for="result">
                                                             <label for="result" class="form-label">Result:</label>
-                                                            <input type="text" name="result" placeholder="Result" data-form-field="result" 
-                                                                class="form-control" value="" id="result" readonly>
+                                                            <input type="text" name="result" placeholder="Result"
+                                                                data-form-field="result" class="form-control" value=""
+                                                                id="result" readonly>
                                                         </div>
                                                         <!-- Error Message Container -->
                                                         <div id="error-message" class="error-message"></div>
-                                                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
-                                                            <button type="button" class="btn btn-primary display-7" onclick="calculate()">Calculate</button>
+                                                        <div
+                                                            class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
+                                                            <button type="button" class="btn btn-primary display-7"
+                                                                onclick="calculate()">Calculate</button>
                                                         </div>
-                                                </div>
+                                                    </div>
                                             </form>
                                         </div>
                                     </div>
@@ -178,6 +558,202 @@
                 </div>
             </div>
         </div>
+        <footer>
+            <div class="footer-section">
+                <h2>Team Members</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Role</th>
+                            <th>Roll Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jitesh Patel</td>
+                            <td>Documentation & Research</td>
+                            <td>23BCP196</td>
+                        </tr>
+                        <tr>
+                            <td>Shardul Jani</td>
+                            <td>Development and Design</td>
+                            <td>23BCP225</td>
+                        </tr>
+                        <tr>
+                            <td>Prasanna Vijh</td>
+                            <td>Documentation & Research</td>
+                            <td>23BCP235</td>
+                        </tr>
+                        <tr>
+                            <td>Dev Patel</td>
+                            <td>Documentation & Research</td>
+                            <td>23BCP237</td>
+                        </tr>
+                        <tr>
+                            <td>Prakash Dangi</td>
+                            <td>Development & Design</td>
+                            <td>23BCP239</td>
+                        </tr>
+                        <tr>
+                            <td>Nidhi Baldaniya</td>
+                            <td>&nbsp;Documentation & Research</td>
+                            <td>23BCP240</td>
+                        </tr>
+                        <tr>
+                            <td>Meet Rathod</td>
+                            <td>Development & Design</td>
+                            <td>23BCP241</td>
+                        </tr>
+                        <!-- Add similar rows for other team members -->
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="footer-section">
+                <h2>Calculators</h2>
+                <a href="StressCalculator.html">Stress</a>
+                <a href="StrainCalculator.html">Strain</a>
+                <a href="DeformationInBars.html">Deformation and Young's Modulus</a>
+                <a href="PoissonsRatio.html">Poissons Ratio</a>
+                <a href="ElasticConstantsCalculator.html">Elastic Moduli</a>
+                <a href="ElasticModuliPoissonsRatioRelations.html">Moduli and Poissons Ratio</a>
+            </div>
+
+            <div class="footer-section">
+                <h2>Documentation</h2>
+                <a href="#">Link to PDF 1</a>
+                <a href="#">Link to PDF 2</a>
+                <!-- Add similar lines for other documentation links -->
+            </div>
+
+            <div class="footer-section">
+                <h2>Submitted To</h2>
+                <p>Dr. Ayyanna Habal</p>
+                <p>Ph.D., IIT Bombay</p>
+                <p>Assistant Professor,
+                    Department of Civil Engineering, SOT,
+                    Pandit Deendayal Energy University (PDEU)</p>
+            </div>
+
+            <hr>
+
+            <p>Pandit Deendayal Energy University (PDEU)
+                Gandhinagar, Gujarat - 382007</p>
+        </footer>
+    </section>
+
+    <script>
+        // JavaScript to adjust the margin-top of the footer based on the height of the button section
+        document.addEventListener("DOMContentLoaded", function () {
+            var buttonSection = document.getElementById("button-section");
+            var footer = document.querySelector("footer");
+
+            // Set initial margin-top for the footer
+            footer.style.marginTop = buttonSection.clientHeight + "px";
+
+            // Update margin-top on window resize
+            window.addEventListener("resize", function () {
+                footer.style.marginTop = buttonSection.clientHeight + "px";
+            });
+        });
+    </script>
+    <!-- JavaScript for scrolling to the footer -->
+    <script>
+        function scrollToFooter() {
+            var footer = document.querySelector("footer");
+            footer.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var nav = document.querySelector("nav");
+
+            // Update the navigation bar style on scroll
+            window.addEventListener("scroll", function () {
+                var scrollPos = window.scrollY;
+
+                if (scrollPos > 50) {
+                    // Add a shadow and change background color when scrolling down
+                    nav.style.background = "rgba(51, 51, 51, 0.9)";
+                    nav.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+                } else {
+                    // Reset styles when at the top of the page
+                    nav.style.background = "rgba(51, 51, 51, 0.8)";
+                    nav.style.boxShadow = "none";
+                }
+            });
+
+            // Keep the navigation bar fixed at the top
+            var navOffsetTop = nav.offsetTop;
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY >= navOffsetTop) {
+                    nav.style.position = "fixed";
+                    nav.style.width = "100%";
+                    nav.style.top = "0";
+                    nav.style.zIndex = "1000";
+                } else {
+                    nav.style.position = "";
+                    nav.style.width = "";
+                    nav.style.top = "";
+                    nav.style.zIndex = "";
+                }
+            });
+        });
+    </script>
+    <script>
+        function showDropdown() {
+            var dropdownContent = document.querySelector(".dr opdown-content");
+            dropdownContent.style.display = "block";
+        }
+
+        function hideDropdown() {
+            var dropdownContent = document.querySelector(".dropdown-content");
+            dropdownContent.style.display = "none";
+        }
+    </script>
+
+    <script>
+        function toggleMenu() {
+            var mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.style.display = (mobileMenu.style.display === 'flex' || mobileMenu.style.display === '') ? 'none' : 'flex';
+        }
+
+        // Close the mobile menu when a link or button is clicked
+        var mobileLinks = document.querySelectorAll('.mobile-menu a, .mobile-menu button');
+        mobileLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                var mobileMenu = document.querySelector('.mobile-menu');
+                mobileMenu.style.display = 'none';
+            });
+        });
+    </script>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+    </script>
+
+    <script>
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
     <script src="Js files\ElasticModuliPoissonsRatioRelations.js"></script>
-    </body>
-    </html>
+</body>
+
+</html>
