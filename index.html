@@ -266,64 +266,19 @@ nav a:hover {
         margin: 5px 0;
     }
 }
-    @media only screen and (max-width: 768px) {
-      .logo {
-        text-align: center; /* Center the logo for smaller screens */
-      }
+@media only screen and (max-width: 768px) {
+            nav {
+                display: none;
+            }
 
-      .nav-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        background-color: rgba(51, 51, 51, 0.87);
-        box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
-      }
+            .hamburger-menu {
+                display: flex;
+            }
 
-      /* Hide the regular navigation items for smaller screens */
-      nav a {
-        display: none;
-      }
-
-      .hamburger-menu {
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-      }
-
-      .bar {
-        width: 30px;
-        height: 3px;
-        background-color: #fff;
-        margin: 6px 0;
-        transition: 0.4s;
-      }
-
-      .mobile-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #333;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-      }
-
-      .mobile-menu a,
-      .mobile-menu button {
-        padding: 15px;
-        text-align: center;
-        text-decoration: none;
-        color: #fff;
-        transition: background-color 0.3s ease;
-      }
-
-      .mobile-menu a:hover,
-      .mobile-menu button:hover {
-        background-color: #555;
-      }
-    }
+            .mobile-menu {
+                display: flex;
+            }
+        }
   </style>
 
 </head>
