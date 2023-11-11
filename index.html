@@ -365,52 +365,45 @@
   <body>
     <!-- Navigation Bar -->
     <nav>
-      <div class="logo">Civil<span>Calculator</span></div>
-
-      <div class="dropdown">
-        <a href="#">Tools</a>
-        <div class="dropdown-content">
-          <a href="StressCalculator.html">Stress</a>
-          <a href="StrainCalculator.html">Strain</a>
-          <a href="PoissonsRatio.html">Poissons Ratio</a>
-          <a href="ElasticConstantsCalculator.html">Elastic Moduli</a>
-          <a href="DeformationInBars.html">Deformation and Young's Modulus</a>
-          <a href="ElasticModuliPoissonsRatioRelations.html"
-            >Moduli and Poissons Ratio
-          </a>
+        <div class="logo">Civil<span>Calculator</span></div>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-      </div>
-      <div class="dropdown">
-        <a href="#">Resources</a>
-        <div class="dropdown-content">
-          <a href="https://en.wikipedia.org/wiki/Stress_(mechanics)"
-            >More on Stress</a
-          >
-          <a href="https://en.wikipedia.org/wiki/Strain_(mechanics)"
-            >More on Strain</a
-          >
-          <a href="https://en.wikipedia.org/wiki/Poisson%27s_ratio"
-            >Poisson's Ratio</a
-          >
-          <a href="https://en.wikipedia.org/wiki/Young%27s_modulus"
-            >About Young's Modulus</a
-          >
-          <a href="https://en.wikipedia.org/wiki/Deformation_(engineering)"
-            >About Deformation</a
-          >
+        <div class="mobile-menu">
+            <a href="#">Tools</a>
+            <a href="#">Resources</a>
+            <a href="#">Documentation</a>
+            <button id="about-button" onclick="scrollToFooter()">About the Project</button>
+            <a href="#">Suggestions</a>
         </div>
-      </div>
-      <a href="#">Documentation</a>
-      <button id="about-button" onclick="scrollToFooter()">
-        About the Project
-      </button>
-      <a href="#">Suggestions</a>
-      <div class="hamburger-menu" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
+        <div class="dropdown">
+            <a href="#">Tools</a>
+            <div class="dropdown-content">
+                <a href="StressCalculator.html">Stress</a>
+                <a href="StrainCalculator.html">Strain</a>
+                <a href="PoissonsRatio.html">Poissons Ratio</a>
+                <a href="ElasticConstantsCalculator.html">Elastic Moduli</a>
+                <a href="DeformationInBars.html">Deformation and Young's Modulus</a>
+                <a href="ElasticModuliPoissonsRatioRelations.html">Moduli and Poissons Ratio</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Resources</a>
+            <div class="dropdown-content">
+                <a href="https://en.wikipedia.org/wiki/Stress_(mechanics)">More on Stress</a>
+                <a href="https://en.wikipedia.org/wiki/Strain_(mechanics)">More on Strain</a>
+                <a href="https://en.wikipedia.org/wiki/Poisson%27s_ratio">Poisson's Ratio</a>
+                <a href="https://en.wikipedia.org/wiki/Young%27s_modulus">About Young's Modulus</a>
+                <a href="https://en.wikipedia.org/wiki/Deformation_(engineering)">About Deformation</a>
+            </div>
+        </div>
+        <a href="#">Documentation</a>
+        <button id="about-button" onclick="scrollToFooter()">About the Project</button>
+        <a href="#">Suggestions</a>
     </nav>
+
 
     <section
       data-bs-version="5.1"
@@ -599,26 +592,21 @@
       }
     </script>
 
-    <script>
-      function toggleMenu() {
+<script>
+    function toggleMenu() {
         var mobileMenu = document.querySelector(".mobile-menu");
-        mobileMenu.style.display =
-          mobileMenu.style.display === "flex" || mobileMenu.style.display === ""
-            ? "none"
-            : "flex";
-      }
+        mobileMenu.style.display = mobileMenu.style.display === "flex" || mobileMenu.style.display === "" ? "none" : "flex";
+    }
 
-      // Close the mobile menu when a link or button is clicked
-      var mobileLinks = document.querySelectorAll(
-        ".mobile-menu a, .mobile-menu button"
-      );
-      mobileLinks.forEach(function (link) {
+    // Close the mobile menu when a link or button is clicked
+    var mobileLinks = document.querySelectorAll(".mobile-menu a, .mobile-menu button");
+    mobileLinks.forEach(function (link) {
         link.addEventListener("click", function () {
-          var mobileMenu = document.querySelector(".mobile-menu");
-          mobileMenu.style.display = "none";
+            var mobileMenu = document.querySelector(".mobile-menu");
+            mobileMenu.style.display = "none";
         });
-      });
-    </script>
+    });
+</script>
 
     <input name="animation" type="hidden" />
   </body>
