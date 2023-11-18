@@ -351,7 +351,7 @@
                             <a href="StressCalculator.html">Stress</a>
                             <a href="StrainCalculator.html">Strain</a>
                             <a href="PoissonsRatio.html">Poissons Ratio</a>
-                            <a href="ElasticConstantsCalculator.html">Elastic Moduli</a>
+                            <a href="ElasticModuliCalculator.html">Elastic Moduli</a>
                             <a href="DeformationInBars.html">Deformation and Young's Modulus</a>
                             <a href="ElasticModuliPoissonsRatioRelations.html">Moduli and Poissons Ratio </a>
                         </div>
@@ -395,6 +395,87 @@
             </div>
             <div class="row justify-content-center mt-4">
                 <div class="col-lg-8 mx-auto">
+                    <!-- Calculator Section -->
+                    <div class="mbr-section" id="calculator-section">
+                        <h3 class="mbr-section-title mbr-fonts-style align-left mb-4 display-4">
+                            <strong>Elastic Moduli Calculator</strong>
+                        </h3>
+                        <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
+                            Choose the parameter you want to calculate and enter the known values:
+                        </p>
+                        <!-- Calculator Form -->
+                        <div class="mbr-section" id="calculator-form">
+                            <div class="container">
+                                <div class="row justify-content-center mt-4">
+                                    <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                                        <form method="POST" class="mbr-form form-with-styler" id="elastic-moduli-form">
+                                            <div class="dragArea row">
+                                                <div class="col-md col-sm-12 form-group mb-3"
+                                                    data-for="parameter-select">
+                                                    <label for="parameter-select" class="form-label">Select
+                                                        Parameter:</label>
+                                                    <select class="form-control" id="parameter-select" required>
+                                                        <option value="" disabled selected>Select Parameter</option>
+                                                        <option value="E">Elastic Modulus (E)</option>
+                                                        <option value="G">Rigidity Modulus (G)</option>
+                                                        <option value="K">Bulk Modulus (K)</option>
+                                                        <option value="mu">Poisson's Ratio (\(\mu\))</option>
+                                                    </select>
+                                                    <div class="col-md col-sm-12 form-group mb-3"
+                                                        data-for="known-values">
+                                                        <label for="known-values" class="form-label">Enter Known
+                                                            Values:</label>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <label for="known-e">E:</label>
+                                                                <input type="text" name="known-e" placeholder="E"
+                                                                    data-form-field="known-e" class="form-control"
+                                                                    value="" id="known-e">
+                                                            </div>
+                                                            <div class="col">
+                                                                <label for="known-g">G:</label>
+                                                                <input type="text" name="known-g" placeholder="G"
+                                                                    data-form-field="known-g" class="form-control"
+                                                                    value="" id="known-g">
+                                                            </div>
+                                                            <div class="col">
+                                                                <label for="known-k">K:</label>
+                                                                <input type="text" name="known-k" placeholder="K"
+                                                                    data-form-field="known-k" class="form-control"
+                                                                    value="" id="known-k">
+                                                            </div>
+                                                            <div class="col">
+                                                                <label for="known-mu">μ:</label>
+                                                                <input type="text" name="known-mu" placeholder="μ   "
+                                                                    data-form-field="known-mu" class="form-control"
+                                                                    value="" id="known-mu">
+                                                            </div>
+                                                        </div>
+                                                        <small id="known-values-help" class="form-text text-muted">
+                                                            Enter numeric values for each known variable. Leave the
+                                                            space blank for the variable you want to calculate.
+                                                        </small>
+                                                    </div>
+                                                    <div class="col-md col-sm-12 form-group mb-3" data-for="result">
+                                                        <label for="result" class="form-label">Result:</label>
+                                                        <input type="text" name="result" placeholder="Result"
+                                                            data-form-field="result" class="form-control" value=""
+                                                            id="result" readonly>
+                                                    </div>
+                                                    <!-- Error Message Container -->
+                                                    <div id="error-message" class="error-message"></div>
+                                                    <div
+                                                        class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
+                                                        <button type="button" class="btn btn-primary display-7"
+                                                            onclick="calculate()">Calculate</button>
+                                                    </div>
+                                                </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Theory Section -->
                     <div class="mbr-section" id="theory-section">
                         <h3 class="mbr-section-title mbr-fonts-style align-left mb-4 display-4">
@@ -470,89 +551,6 @@
                             where \( \mu \) is Poisson's Ratio, \( E \) is the Elastic Modulus, and \( G \) is the
                             Rigidity Modulus.
                         </p>
-
-                        <!-- Calculator Section -->
-                        <div class="mbr-section" id="calculator-section">
-                            <h3 class="mbr-section-title mbr-fonts-style align-left mb-4 display-4">
-                                <strong>Elastic Moduli Calculator</strong>
-                            </h3>
-                            <p class="mbr-text mbr-fonts-style align-left mb-4 display-7">
-                                Choose the parameter you want to calculate and enter the known values:
-                            </p>
-                            <!-- Calculator Form -->
-                            <div class="mbr-section" id="calculator-form">
-                                <div class="container">
-                                    <div class="row justify-content-center mt-4">
-                                        <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                                            <form method="POST" class="mbr-form form-with-styler"
-                                                id="elastic-moduli-form">
-                                                <div class="dragArea row">
-                                                    <div class="col-md col-sm-12 form-group mb-3"
-                                                        data-for="parameter-select">
-                                                        <label for="parameter-select" class="form-label">Select
-                                                            Parameter:</label>
-                                                        <select class="form-control" id="parameter-select" required>
-                                                            <option value="" disabled selected>Select Parameter</option>
-                                                            <option value="E">Elastic Modulus (E)</option>
-                                                            <option value="G">Rigidity Modulus (G)</option>
-                                                            <option value="K">Bulk Modulus (K)</option>
-                                                            <option value="mu">Poisson's Ratio (\(\mu\))</option>
-                                                        </select>
-                                                        <div class="col-md col-sm-12 form-group mb-3"
-                                                            data-for="known-values">
-                                                            <label for="known-values" class="form-label">Enter Known
-                                                                Values:</label>
-                                                            <div class="row">
-                                                                <div class="col">
-                                                                    <label for="known-e">E:</label>
-                                                                    <input type="text" name="known-e" placeholder="E"
-                                                                        data-form-field="known-e" class="form-control"
-                                                                        value="" id="known-e">
-                                                                </div>
-                                                                <div class="col">
-                                                                    <label for="known-g">G:</label>
-                                                                    <input type="text" name="known-g" placeholder="G"
-                                                                        data-form-field="known-g" class="form-control"
-                                                                        value="" id="known-g">
-                                                                </div>
-                                                                <div class="col">
-                                                                    <label for="known-k">K:</label>
-                                                                    <input type="text" name="known-k" placeholder="K"
-                                                                        data-form-field="known-k" class="form-control"
-                                                                        value="" id="known-k">
-                                                                </div>
-                                                                <div class="col">
-                                                                    <label for="known-mu">μ:</label>
-                                                                    <input type="text" name="known-mu"
-                                                                        placeholder="μ   " data-form-field="known-mu"
-                                                                        class="form-control" value="" id="known-mu">
-                                                                </div>
-                                                            </div>
-                                                            <small id="known-values-help" class="form-text text-muted">
-                                                                Enter numeric values for each known variable. Leave the
-                                                                space blank for the variable you want to calculate.
-                                                            </small>
-                                                        </div>
-                                                        <div class="col-md col-sm-12 form-group mb-3" data-for="result">
-                                                            <label for="result" class="form-label">Result:</label>
-                                                            <input type="text" name="result" placeholder="Result"
-                                                                data-form-field="result" class="form-control" value=""
-                                                                id="result" readonly>
-                                                        </div>
-                                                        <!-- Error Message Container -->
-                                                        <div id="error-message" class="error-message"></div>
-                                                        <div
-                                                            class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
-                                                            <button type="button" class="btn btn-primary display-7"
-                                                                onclick="calculate()">Calculate</button>
-                                                        </div>
-                                                    </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

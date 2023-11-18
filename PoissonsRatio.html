@@ -3,10 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
-    <meta name="description" content="">
     <title>Poisson's Ratio Calculator</title>
     <script type="text/javascript" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -343,7 +340,7 @@
                             <a href="StressCalculator.html">Stress</a>
                             <a href="StrainCalculator.html">Strain</a>
                             <a href="PoissonsRatio.html">Poissons Ratio</a>
-                            <a href="ElasticConstantsCalculator.html">Elastic Moduli</a>
+                            <a href="ElasticModuliCalculator.html">Elastic Moduli</a>
                             <a href="DeformationInBars.html">Deformation and Young's Modulus</a>
                             <a href="ElasticModuliPoissonsRatioRelations.html">Moduli and Poissons Ratio </a>
                         </div>
@@ -378,6 +375,60 @@
             </div>
         </nav>
     </header>
+
+    <!-- Poisson's Ratio Calculator Section -->
+    <section data-bs-version="5.1" class="form5" id="poissons-ratio-calculator"
+        style="padding-top: 100px; padding-bottom: 65px;">
+        <div class="container">
+            <div class="mbr-section-head mb-5">
+                <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                    <strong>Poisson's Ratio Calculator</strong>
+                </h3>
+                <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                    Enter the values of relevant strains to calculate Poisson's Ratio (\( \mu \)).
+                </h4>
+            </div>
+            <!-- Calculator Form -->
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                    <form method="POST" class="mbr-form form-with-styler" data-form-title="Poisson's Ratio Calculator"
+                        id="poissons-ratio-form">
+                        <!-- Axial Strain input -->
+                        <div class="dragArea row">
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="axial-strain">
+                                <label for="axial-strain">Axial Strain:</label>
+                                <input type="text" name="Axial Strain" placeholder="Enter Axial Strain"
+                                    data-form-field="Axial Strain" class="form-control" value="" id="axial-strain">
+                            </div>
+                        </div>
+
+                        <!-- Transverse Strain input -->
+                        <div class="dragArea row">
+                            <div class="col-md col-sm-12 form-group mb-3" data-for="transverse-strain">
+                                <label for="transverse-strain">Transverse Strain:</label>
+                                <input type="text" name="Transverse Strain" placeholder="Enter Transverse Strain"
+                                    data-form-field="Transverse Strain" class="form-control" value=""
+                                    id="transverse-strain">
+                            </div>
+                        </div>
+
+                        <!-- Result display -->
+                        <div class="col-12 form-group mb-3" data-for="poissons-ratio-result">
+                            <label for="poissons-ratio-result">Poisson's Ratio:</label>
+                            <input type="tel" name="Poisson's Ratio" placeholder="Poisson's Ratio"
+                                data-form-field="Poisson's Ratio" class="form-control" value=""
+                                id="poissons-ratio-result" style="text-align: center;" readonly>
+                        </div>
+
+                        <!-- Calculate button -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
+                            <button type="submit" class="btn btn-primary display-7">Calculate</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Poisson's Ratio Theory Section -->
     <section data-bs-version="5.1" class="mbr-section" id="poissons-ratio-theory" style="padding-top: 100px;">
@@ -445,62 +496,9 @@
             <!-- Button to navigate to Poisson's Ratio Calculator -->
             <div class="row justify-content-center">
                 <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
-                    <a href="ElasticModuliPoissonsRatioRelations.html" class="btn btn-primary display-7">Go to
-                        Calculator</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Poisson's Ratio Calculator Section -->
-    <section data-bs-version="5.1" class="form5" id="poissons-ratio-calculator"
-        style="padding-top: 100px; padding-bottom: 65px;">
-        <div class="container">
-            <div class="mbr-section-head mb-5">
-                <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                    <strong>Poisson's Ratio Calculator</strong>
-                </h3>
-                <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
-                    Enter the values of relevant strains to calculate Poisson's Ratio (\( \mu \)).
-                </h4>
-            </div>
-            <!-- Calculator Form -->
-            <div class="row justify-content-center mt-4">
-                <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                    <form method="POST" class="mbr-form form-with-styler" data-form-title="Poisson's Ratio Calculator"
-                        id="poissons-ratio-form">
-                        <!-- Axial Strain input -->
-                        <div class="dragArea row">
-                            <div class="col-md col-sm-12 form-group mb-3" data-for="axial-strain">
-                                <label for="axial-strain">Axial Strain:</label>
-                                <input type="text" name="Axial Strain" placeholder="Enter Axial Strain"
-                                    data-form-field="Axial Strain" class="form-control" value="" id="axial-strain">
-                            </div>
-                        </div>
-
-                        <!-- Transverse Strain input -->
-                        <div class="dragArea row">
-                            <div class="col-md col-sm-12 form-group mb-3" data-for="transverse-strain">
-                                <label for="transverse-strain">Transverse Strain:</label>
-                                <input type="text" name="Transverse Strain" placeholder="Enter Transverse Strain"
-                                    data-form-field="Transverse Strain" class="form-control" value=""
-                                    id="transverse-strain">
-                            </div>
-                        </div>
-
-                        <!-- Result display -->
-                        <div class="col-12 form-group mb-3" data-for="poissons-ratio-result">
-                            <label for="poissons-ratio-result">Poisson's Ratio:</label>
-                            <input type="tel" name="Poisson's Ratio" placeholder="Poisson's Ratio"
-                                data-form-field="Poisson's Ratio" class="form-control" value=""
-                                id="poissons-ratio-result" style="text-align: center;" readonly>
-                        </div>
-
-                        <!-- Calculate button -->
-                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
-                            <button type="submit" class="btn btn-primary display-7">Calculate</button>
-                        </div>
-                    </form>
+                    <a href="ElasticModuliPoissonsRatioRelations.html" class="btn btn-primary display-7">CLICK HERE If
+                        you want to calculate different elastic moduli and poissons ratio using the relations between
+                        them.</a>
                 </div>
             </div>
         </div>

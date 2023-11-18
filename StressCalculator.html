@@ -3,12 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="generator" content="Mobirise v5.9.6, mobirise.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
-    <meta name="description" content="">
-
     <title>Mechanical Stress Calculators</title>
     <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -343,7 +338,7 @@
                             <a href="StressCalculator.html">Stress</a>
                             <a href="StrainCalculator.html">Strain</a>
                             <a href="PoissonsRatio.html">Poissons Ratio</a>
-                            <a href="ElasticConstantsCalculator.html">Elastic Moduli</a>
+                            <a href="ElasticModuliCalculator.html">Elastic Moduli</a>
                             <a href="DeformationInBars.html">Deformation and Young's Modulus</a>
                             <a href="ElasticModuliPoissonsRatioRelations.html">Moduli and Poissons Ratio </a>
                         </div>
@@ -386,6 +381,9 @@
                 </h3>
             </div>
             <div class="row justify-content-center mt-4">
+                <div class="mbr-section-head mb-5">
+                    <h5 class="mbr-fonts-style align-center mb-0 display-5">Torsional stress Calculator</h5>
+                </div>
                 <!-- Torsional Stress Calculator -->
                 <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
                     <form method="POST" class="mbr-form form-with-styler" data-form-title="Torsional Stress Calculator"
@@ -410,7 +408,7 @@
                             <div class="col-12 form-group mb-3" data-for="torsional-stress-result">
                                 <input type="tel" name="Torsional Stress" placeholder="Torsional Stress"
                                     data-form-field="Torsional Stress" class="form-control" value=""
-                                    id="torsional-stress-result" style="text-align: center;">
+                                    id="torsional-stress-result" style="text-align: center;" readonly>
                             </div>
                             <div class="col-12 form-group mb-3" id="torsional-stress-unit">
                                 <select name="Torsional Stress Unit" class="form-control" id="torsional-unit-selector">
@@ -428,7 +426,11 @@
                         </div>
                     </form>
                 </div>
-
+                <hr style="border: 2px solid black; margin: 20px 0;">
+                <hr style="border: 2px solid black; margin: 20px 0;">
+                <div class="mbr-section-head mb-5">
+                    <h5 class="mbr-fonts-style align-center mb-0 display-5">Bending stress Calculator</h5>
+                </div>
                 <!-- Bending Stress Calculator -->
                 <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
                     <form method="POST" class="mbr-form form-with-styler" data-form-title="Bending Stress Calculator"
@@ -453,7 +455,7 @@
                             <div class="col-12 form-group mb-3" data-for="bending-stress-result">
                                 <input type="tel" name="Bending Stress" placeholder="Bending Stress"
                                     data-form-field="Bending Stress" class="form-control" value=""
-                                    id="bending-stress-result" style="text-align: center;">
+                                    id="bending-stress-result" style="text-align: center;" readonly>
                             </div>
                             <div class="col-12 form-group mb-3" id="bending-stress-unit">
                                 <select name="Bending Stress Unit" class="form-control" id="bending-unit-selector">
@@ -470,6 +472,11 @@
                             </div>
                         </div>
                     </form>
+                </div>
+                <hr style="border: 2px solid black; margin: 20px 0;">
+                <hr style="border: 2px solid black; margin: 20px 0;">
+                <div class="mbr-section-head mb-5">
+                    <h5 class="mbr-fonts-style align-center mb-0 display-5">Shear stress Calculator</h5>
                 </div>
                 <!-- Shear Stress Calculator -->
                 <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
@@ -495,7 +502,7 @@
                             <div class="col-12 form-group mb-3" data-for="shear-stress-result">
                                 <input type="tel" name="Shear Stress" placeholder="Shear Stress"
                                     data-form-field="Shear Stress" class="form-control" value=""
-                                    id="shear-stress-result" style="text-align: center;">
+                                    id="shear-stress-result" style="text-align: center;" readonly>
                             </div>
                             <div class="col-12 form-group mb-3" id="shear-stress-unit">
                                 <select name="Shear Stress Unit" class="form-control" id="shear-unit-selector">
@@ -511,6 +518,11 @@
                             </div>
                         </div>
                     </form>
+                </div>
+                <hr style="border: 2px solid black; margin: 20px 0;">
+                <hr style="border: 2px solid black; margin: 20px 0;">
+                <div class="mbr-section-head mb-5">
+                    <h5 class="mbr-fonts-style align-center mb-0 display-5">Compressive/Tensile stress Calculator</h5>
                 </div>
                 <!-- Compressive and Tensile Stress Calculator -->
                 <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
@@ -537,7 +549,8 @@
                             </div>
                             <div class="col-12 form-group mb-3" data-for="stress-result">
                                 <input type="tel" name="Stress" placeholder="Stress" data-form-field="Stress"
-                                    class="form-control" value="" id="stress-result" style="text-align: center;">
+                                    class="form-control" value="" id="stress-result" style="text-align: center;"
+                                    readonly>
                             </div>
                             <div class="col-12 form-group mb-3" id="stress-unit">
                                 <select name="Stress Unit" class="form-control" id="stress-unit-selector">
@@ -555,6 +568,8 @@
                         </div>
                     </form>
                 </div>
+                <hr style="border: 2px solid black; margin: 20px 0;">
+                <hr style="border: 2px solid black; margin: 20px 0;">
             </div>
         </div>
     </section>
@@ -562,9 +577,7 @@
     <section data-bs-version="5.1" class="form5" id="thermal-stress-calculator" style="margin-top: 80px;">
         <div class="container">
             <div class="mbr-section-head mb-5">
-                <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                    <strong>Thermal Stress Calculator</strong>
-                </h3>
+                <h5 class="mbr-fonts-style align-center mb-0 display-5">Thermal stress Calculator</h5>
             </div>
             <div class="row justify-content-center mt-4">
                 <!-- Thermal Stress Calculator Form -->
@@ -588,7 +601,7 @@
                             <div class="col-12 form-group mb-3" data-for="thermal-stress-result">
                                 <input type="tel" name="Thermal Stress" placeholder="Thermal Stress"
                                     data-form-field="Thermal Stress" class="form-control" value=""
-                                    id="thermal-stress-result" style="text-align: center;">
+                                    id="thermal-stress-result" style="text-align: center;" readonly>
                             </div>
 
                             <div class="col-12 form-group mb-3" id="thermal-stress-unit">
